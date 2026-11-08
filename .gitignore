@@ -1,3 +1,25 @@
+# Dependencies and builds
 node_modules/
 dist/
+dist-ssr/
+coverage/
+.vite/
+*.tsbuildinfo
+# Local settings and secrets
+.env
+.env.*
+!.env.example
+*.local
+*.pem
+*.key
+.npmrc
+.pnpm-store/
+# Logs and test artifacts
 *.log
+playwright-report/
+test-results/
+# Editor and OS files
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
