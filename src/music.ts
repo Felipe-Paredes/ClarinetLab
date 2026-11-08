@@ -56,6 +56,7 @@ export function generatePassage(options: ExerciseOptions, random = Math.random):
 }
 
 function abcPitch(midi: number, key: KeyName): string {
+  if (midi === -1) return 'z';
   const degree = MAJOR.indexOf((midi - KEYS[key].tonic + 12) % 12);
   if (degree < 0) throw new Error('Pitch is outside the selected major key.');
   const name = KEYS[key].names[degree];
@@ -66,8 +67,20 @@ function abcPitch(midi: number, key: KeyName): string {
 export function passageToAbc(passage: Passage): string {
   const { options, bars } = passage;
   const lines: string[] = [];
+  const serializeBar = (bar: Passage['bars'][number]): string => {
+    let elapsed = 0;
+    return bar.map((note, index) => {
+      const previous = bar[index - 1];
+      // Adjacent eighths share a beam only within the same quarter-note beat.
+      const beam = previous && previous.beats === 0.5 && note.beats === 0.5
+        && previous.midi !== -1 && note.midi !== -1 && elapsed % 1 !== 0;
+      const separator = index === 0 || beam ? '' : ' ';
+      elapsed += note.beats;
+      return `${separator}${abcPitch(note.midi, options.key)}${note.beats * 2}`;
+    }).join('');
+  };
   for (let i = 0; i < bars.length; i += 4) {
-    lines.push(bars.slice(i, i + 4).map(bar => bar.map(note => `${abcPitch(note.midi, options.key)}${note.beats * 2}`).join(' ')).join(' | ') + (i + 4 >= bars.length ? ' |]' : ' |'));
+    lines.push(bars.slice(i, i + 4).map(serializeBar).join(' | ') + (i + 4 >= bars.length ? ' |]' : ' |'));
   }
   return ['X:1', 'T:Daily clarinet study', `M:${options.meter}/4`, 'L:1/8', `Q:1/4=${options.tempo}`, '%%stretchlast 1', `K:${options.key} clef=treble`, ...lines].join('\n');
 }
