@@ -21,7 +21,7 @@ export function seededRandom(seed: number): () => number {
 }
 
 export function generatePassage(options: ExerciseOptions, random = Math.random): Passage {
-  if (!(options.key in KEYS) || ![3, 4].includes(options.meter) || !Number.isInteger(options.measures) || options.measures < 1 || options.measures > 32 || !Number.isFinite(options.tempo) || options.tempo < 30 || options.tempo > 240 || !['beginner', 'intermediate'].includes(options.difficulty)) {
+  if (!Object.hasOwn(KEYS, options.key) || ![3, 4].includes(options.meter) || !Number.isInteger(options.measures) || options.measures < 1 || options.measures > 32 || !Number.isFinite(options.tempo) || options.tempo < 30 || options.tempo > 240 || !['beginner', 'intermediate'].includes(options.difficulty)) {
     throw new Error('Invalid exercise settings.');
   }
   const tonic = KEYS[options.key].tonic;
@@ -29,20 +29,29 @@ export function generatePassage(options: ExerciseOptions, random = Math.random):
     .filter(midi => midi >= 52 && MAJOR.includes((midi - tonic + 12) % 12));
   // Beginner passages remain in the comfortable written G3–G5 register.
   const scale = options.difficulty === 'beginner' ? pitches.filter(n => n >= 55 && n <= 79) : pitches;
-  const pick = (length: number) => Math.min(length - 1, Math.max(0, Math.floor(random() * length)));
+  const pick = (length: number) => {
+    const value = random();
+    if (!Number.isFinite(value) || value < 0 || value >= 1) throw new Error('Random source must return a finite value in [0, 1).');
+    return Math.floor(value * length);
+  };
   let position = scale.findIndex(n => n >= 60 && n % 12 === tonic);
   const bars: Passage['bars'] = [];
   for (let bar = 0; bar < options.measures; bar++) {
     let remaining = options.meter;
     const notes: Passage['bars'][number] = [];
     while (remaining > 0) {
-      const durations = (options.difficulty === 'beginner' ? [1, 1, 2] : [0.5, 0.5, 1, 1, 2]).filter(n => n <= remaining);
+      const elapsed = options.meter - remaining;
+      // Keep simple-meter beats readable: finish an eighth-note pair before
+      // starting a longer note, and do not obscure the middle of a 4/4 bar.
+      const durations = (options.difficulty === 'beginner' ? [1, 1, 2] : [0.5, 0.5, 1, 1, 2])
+        .filter(n => n <= remaining && (elapsed % 1 === 0 || n === 0.5)
+          && !(options.meter === 4 && elapsed === 1 && n === 2));
       let beats = durations[pick(durations.length)];
       if (bar === options.measures - 1 && remaining <= 2) {
         // Settle the phrase on the nearest tonic with a sustained final note.
         const tonicPositions = scale.map((n, i) => n % 12 === tonic ? i : -1).filter(i => i >= 0);
         position = tonicPositions.reduce((best, i) => Math.abs(i - position) < Math.abs(best - position) ? i : best);
-        beats = remaining;
+        beats = elapsed % 1 === 0 ? remaining : 0.5;
       } else if (bar !== 0 || notes.length !== 0) {
         const steps = options.difficulty === 'beginner' ? [-1, 0, 1] : [-2, -1, -1, 0, 1, 1, 2];
         position = Math.max(0, Math.min(scale.length - 1, position + steps[pick(steps.length)]));
@@ -84,3 +93,4 @@ export function passageToAbc(passage: Passage): string {
   }
   return ['X:1', 'T:Daily clarinet study', `M:${options.meter}/4`, 'L:1/8', `Q:1/4=${options.tempo}`, '%%stretchlast 1', `K:${options.key} clef=treble`, ...lines].join('\n');
 }
+

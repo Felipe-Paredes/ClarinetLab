@@ -1,4 +1,4 @@
-import { useEffect, useRef, useState } from 'react';
+import { useEffect, useMemo, useRef, useState } from 'react';
 import { ClarinetPlayer } from './audio';
 import { generatePassage, seededRandom } from './music';
 import { DEFAULT_OPTIONS, type ExerciseOptions } from './types';
@@ -13,12 +13,13 @@ export default function App() {
   const [passage, setPassage] = useState(() => generatePassage(DEFAULT_OPTIONS, seededRandom(1729)));
   const [activeSeed, setActiveSeed] = useState(1729);
   const [status, setStatus] = useState<PlayerState>('idle');
+  const [transportBusy, setTransportBusy] = useState(false);
   const [metronome, setMetronome] = useState(false);
   const [error, setError] = useState('');
   const player = useRef<ClarinetPlayer | null>(null);
   const request = useRef(0);
-  useEffect(() => () => { request.current++; player.current?.stop(); }, []);
-  function stop() { request.current++; player.current?.stop(); setStatus('idle'); }
+  useEffect(() => () => { request.current++; void player.current?.dispose(); }, []);
+  function stop() { request.current++; player.current?.stop(); setStatus('idle'); setTransportBusy(false); }
   function generate(nextSeed = seed) {
     stop();
     try {
@@ -32,7 +33,7 @@ export default function App() {
     try {
       if (!player.current) player.current = new ClarinetPlayer();
       await player.current.play(passage, options.tempo, metronome, () => {
-        if (request.current === id) setStatus('idle');
+        if (request.current === id) { request.current++; setStatus('idle'); setTransportBusy(false); }
       });
       if (request.current === id) setStatus('playing');
     } catch (e) {
@@ -41,15 +42,27 @@ export default function App() {
       }
     }
   }
-  async function resume() {
-    try { await player.current?.resume(); setStatus('playing'); }
-    catch { setStatus('idle'); setError('Playback could not resume. Please press Play to retry.'); }
+  async function changeTransport(action: 'pause' | 'resume') {
+    const id = request.current;
+    setTransportBusy(true);
+    try {
+      await player.current?.[action]();
+      if (request.current === id) setStatus(action === 'pause' ? 'paused' : 'playing');
+    } catch {
+      if (request.current === id) {
+        stop();
+        setError('Playback could not ' + action + '. Please press Listen to retry.');
+      }
+    } finally {
+      if (request.current === id) setTransportBusy(false);
+    }
   }
   function update<K extends keyof ExerciseOptions>(key: K, value: ExerciseOptions[K]) {
     if (key === 'tempo') stop();
     setOptions(previous => ({ ...previous, [key]: value }));
   }
   const busy = status === 'loading';
+  const displayedPassage = useMemo(() => ({ ...passage, options: { ...passage.options, tempo: options.tempo } }), [passage, options.tempo]);
   return <div className="app">
     <header className="topbar"><a className="brand" href="./"><span className="brand-icon">♮</span>Clarinet<span>Lab</span></a><span className="top-label">YOUR DAILY PRACTICE, REIMAGINED</span><span className="instrument-pill">B♭ Clarinet</span></header>
     <main>
@@ -68,15 +81,15 @@ export default function App() {
         <section className="score-panel">
           <div className="score-heading"><div><div className="eyebrow">YOUR MUSIC STAND</div><h2>{passage.options.key === 'Bb' ? 'B♭' : passage.options.key} major study</h2></div><span className="difficulty-tag">{passage.options.difficulty}</span></div>
           <div className="score-meta"><span>B♭ clarinet · written pitch</span><span>{passage.options.meter}/4 · {passage.options.measures} measures · Seed {activeSeed}</span></div>
-          <Notation passage={{ ...passage, options: { ...passage.options, tempo: options.tempo } }}/>
+          <Notation passage={displayedPassage}/>
           <div className="score-bottom"><span>Sounds a major second below the written notes.</span><button className="text-button" disabled={busy} onClick={() => generate(crypto.getRandomValues(new Uint32Array(1))[0])}>↻ New variation</button></div>
           <div className="playback">
             <div className="transport">
-              {status === 'paused' ? <button className="play-button" onClick={resume}>▶ Resume</button> : status === 'playing' ? <button className="play-button" onClick={() => { player.current?.pause(); setStatus('paused'); }}>Ⅱ Pause</button> : <button className="play-button" disabled={busy} onClick={play}>{busy ? 'Loading samples…' : '▶ Listen'}</button>}
+              {status === 'paused' ? <button className="play-button" disabled={transportBusy} onClick={() => void changeTransport('resume')}>▶ Resume</button> : status === 'playing' ? <button className="play-button" disabled={transportBusy} onClick={() => void changeTransport('pause')}>Ⅱ Pause</button> : <button className="play-button" disabled={busy} onClick={play}>{busy ? 'Loading samples…' : '▶ Listen'}</button>}
               <button className="stop-button" onClick={stop} disabled={status === 'idle'} aria-label="Stop playback">■</button>
               <span className="playback-status" role="status">{status === 'playing' ? 'Playing clarinet' : status === 'paused' ? 'Paused' : status === 'loading' ? 'Preparing clarinet' : 'Ready when you are'}</span>
             </div>
-            <div className="playback-settings"><label className="tempo">Tempo <input aria-label="Playback tempo" type="range" min="40" max="180" step="1" value={options.tempo} onChange={e => update('tempo', Number(e.target.value))}/><strong>{options.tempo}<small> BPM</small></strong></label><label className="metronome"><input type="checkbox" checked={metronome} onChange={e => { stop(); setMetronome(e.target.checked); }}/>Metronome</label></div>
+            <div className="playback-settings"><label className="tempo">Tempo <input aria-label="Playback tempo" aria-valuetext={options.tempo + ' beats per minute'} type="range" min="40" max="180" step="1" value={options.tempo} onChange={e => update('tempo', Number(e.target.value))}/><strong>{options.tempo}<small> BPM</small></strong></label><label className="metronome"><input type="checkbox" checked={metronome} onChange={e => { stop(); setMetronome(e.target.checked); }}/>Metronome</label></div>
           </div>
           {error && <div className="error" role="alert">{error}</div>}
         </section>
@@ -85,4 +98,6 @@ export default function App() {
     </main>
   </div>;
 }
+
+
 
