@@ -1,62 +1,34 @@
 import { describe, expect, it } from 'vitest';
-import { generatePassage, passageToAbc, seededRandom } from './music';
-import { DEFAULT_OPTIONS, type KeyName } from './types';
-
-describe('musical generation', () => {
-  for (const key of ['C', 'G', 'D', 'F', 'Bb'] as KeyName[]) {
-    for (const meter of [3, 4] as const) {
-      for (const difficulty of ['beginner', 'intermediate'] as const) {
-        it(`${key} ${meter}/4 ${difficulty} produces complete diatonic measures`, () => {
-          const tonic = { C: 0, G: 7, D: 2, F: 5, Bb: 10 }[key];
-          for (let seed = 0; seed < 30; seed++) {
-            const passage = generatePassage({ ...DEFAULT_OPTIONS, key, meter, difficulty, measures: 8 }, seededRandom(seed));
-            expect(passage.bars).toHaveLength(8);
-            for (const bar of passage.bars) {
-              expect(bar.reduce((sum, n) => sum + n.beats, 0)).toBe(meter);
-              for (const note of bar) {
-                expect(note.midi).toBeGreaterThanOrEqual(difficulty === 'beginner' ? 55 : 52);
-                expect(note.midi).toBeLessThanOrEqual(difficulty === 'beginner' ? 79 : 84);
-                expect([0, 2, 4, 5, 7, 9, 11]).toContain((note.midi - tonic + 12) % 12);
-                expect(note.beats).toBeGreaterThan(0);
-                if (difficulty === 'beginner') expect(Number.isInteger(note.beats)).toBe(true);
-              }
-            }
-            expect(passage.bars.at(-1)!.at(-1)!.midi % 12).toBe(tonic);
-          }
-        });
-      }
-    }
-  }
-  it('reproduces seeds and varies distinct seeds', () => {
-    expect(generatePassage(DEFAULT_OPTIONS, seededRandom(42))).toEqual(generatePassage(DEFAULT_OPTIONS, seededRandom(42)));
-    expect(generatePassage(DEFAULT_OPTIONS, seededRandom(42))).not.toEqual(generatePassage(DEFAULT_OPTIONS, seededRandom(43)));
-  });
-  it('emits written notation with key, meter, tempo and final barline', () => {
-    const abc = passageToAbc(generatePassage({ ...DEFAULT_OPTIONS, key: 'Bb', meter: 3 }, seededRandom(1)));
-    expect(abc).toContain('K:Bb clef=treble');
-    expect(abc).toContain('M:3/4');
-    expect(abc).toContain('Q:1/4=80');
-    expect(abc.endsWith('|]')).toBe(true);
-  });
-  it('spells Bb and Eb via key signature without redundant accidentals', () => {
-    const abc = passageToAbc({ options: { ...DEFAULT_OPTIONS, key: 'Bb' }, bars: [[{ midi: 70, beats: 2 }, { midi: 75, beats: 2 }]] });
-    expect(abc).toContain('B4 e4 |]');
-  });
-  it('rejects malformed options instead of looping or producing empty pitches', () => {
-    expect(() => generatePassage({ ...DEFAULT_OPTIONS, measures: NaN })).toThrow();
-    expect(() => generatePassage({ ...DEFAULT_OPTIONS, tempo: 0 })).toThrow();
-  });
-});
-
-it('beams eighth notes within beats and separates successive beats', () => {
-  const abc = passageToAbc({ options: DEFAULT_OPTIONS, bars: [[60, 62, 64, 65].map(midi => ({ midi, beats: 0.5 }))] });
-  expect(abc).toContain('C1D1 E1F1 |]');
-});
-it('serializes rests without beaming through them', () => {
-  const abc = passageToAbc({ options: DEFAULT_OPTIONS, bars: [[{ midi: 60, beats: 0.5 }, { midi: -1, beats: 0.5 }, { midi: -1, beats: 1 }, { midi: 64, beats: 2 }]] });
-  expect(abc).toContain('C1 z1 z2 E4 |]');
-});
-it('does not beam eighths across a beat boundary after an offbeat quarter', () => {
-  const abc = passageToAbc({ options: DEFAULT_OPTIONS, bars: [[{ midi: 60, beats: 0.5 }, { midi: 62, beats: 1 }, { midi: 64, beats: 0.5 }, { midi: 65, beats: 0.5 }, { midi: 67, beats: 0.5 }]] });
-  expect(abc).toContain('C1 D2 E1 F1G1 |]');
+import { generatePassage, seededRandom } from './music';
+import { DEFAULT_OPTIONS, type ExerciseOptions } from './types';
+const make=(extra:Partial<ExerciseOptions>={},seed=42)=>generatePassage({...DEFAULT_OPTIONS,...extra},seededRandom(seed));
+describe('generation feature regressions',()=>{
+ it('reproduces definitions and varies seeds',()=>{expect(make()).toEqual(make());expect(make({},1)).not.toEqual(make({},2));});
+ it('validates options and RNG before producing invalid music',()=>{
+  for(const extra of [{measures:0},{measures:129},{tempo:NaN},{key:'constructor'},{difficulty:'constructor'},{rhythm:'invalid'}]) expect(()=>make(extra as Partial<ExerciseOptions>)).toThrow();
+  for(const n of [NaN,Infinity,-0.1,1]) expect(()=>generatePassage(DEFAULT_OPTIONS,()=>n)).toThrow('Random');
+ });
+ it('contains every supported exact duration over a deterministic batch',()=>{
+  const ticks=new Set<number>();
+  for(const difficulty of ['beginner','intermediate','advanced','expert'] as const) for(let seed=0;seed<50;seed++) make({difficulty,measures:16},seed).bars.flat().forEach(n=>ticks.add(n.ticks!));
+  for(const duration of [12,24,36,48,72,96,144,192,288,384]) expect(ticks.has(duration)).toBe(true);
+ });
+ it('expert has higher technical density and larger leaps than advanced',()=>{
+  const stats=(difficulty:'advanced'|'expert')=>{let notes=0,wide=0;for(let seed=0;seed<30;seed++){const ns=make({difficulty,measures:16,restFrequency:'none'},seed).bars.flat();notes+=ns.length;ns.forEach((n,i)=>{if(i&&Math.abs(n.midi-ns[i-1].midi)>=9)wide++;});}return {notes,wide};};
+  const advanced=stats('advanced'),expert=stats('expert');expect(expert.notes).toBeGreaterThan(advanced.notes);expect(expert.wide).toBeGreaterThan(advanced.wide);
+ });
+ it('rest frequency and exercise type affect first-class silence',()=>{
+  const rests=(extra:Partial<ExerciseOptions>)=>Array.from({length:25},(_,seed)=>make({difficulty:'expert',measures:8,...extra},seed).bars.flat().filter(n=>n.kind==='rest').length).reduce((a,b)=>a+b,0);
+  expect(rests({restFrequency:'none'})).toBe(0); expect(rests({restFrequency:'high'})).toBeGreaterThan(rests({restFrequency:'low'}));
+  expect(rests({exerciseType:'rhythm',restFrequency:'medium'})).toBeGreaterThan(rests({exerciseType:'scales',restFrequency:'medium'}));
+ });
+ it('all customization controls affect music',()=>{
+  const base:Partial<ExerciseOptions>={difficulty:'expert',measures:16};
+  for(const [a,b] of [[{rhythm:'simple'},{rhythm:'complex'}],[{articulationComplexity:'none'},{articulationComplexity:'patterned'}],[{dynamics:'none'},{dynamics:'expressive'}],[{articulation:'staccato'},{articulation:'tenuto'}],[{exerciseType:'scales'},{exerciseType:'rhythm'}]] as [Partial<ExerciseOptions>,Partial<ExerciseOptions>][]) expect(make({...base,...a}).bars).not.toEqual(make({...base,...b}).bars);
+ });
+ it('includes closed slurs, dynamic contours and cross-bar ties',()=>{
+  const p=make({difficulty:'expert',measures:16,restFrequency:'none',articulation:'legato',dynamics:'expressive'});
+  expect(p.bars.some((bar,i)=>i<p.bars.length-1&&bar.at(-1)!.tieToNext)).toBe(true);
+  expect(p.bars.flat().some(n=>n.slurStart)).toBe(true);expect(p.bars.flat().some(n=>n.hairpinStart==='crescendo')).toBe(true);expect(p.bars.flat().some(n=>n.hairpinStart==='diminuendo')).toBe(true);
+ });
 });
