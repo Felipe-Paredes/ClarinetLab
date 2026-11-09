@@ -20,3 +20,6 @@ Run pnpm test and pnpm build before committing meaningful code milestones. Cover
 - Never force-push or delete branches without explicit user approval.
 - Never commit secrets, credentials, private keys, local environment files, dependencies, build output or test artifacts. Track the dependency lockfile.
 - Verify pushes succeed before claiming GitHub backup. If remote history exists, inspect and integrate safely; never overwrite it.
+
+## Current scope extension
+The user explicitly requested CORE_ENGINE_SPEC.md after the Phase 1 audit. Read it for the current expressive-engine requirements. Preserve the original master specification. Follow ENGINE_ARCHITECTURE.md for integer tick timing and separate ties/slurs. Tuplets are a subsequent capability; unrelated product phases remain out of scope.

@@ -14,3 +14,6 @@
 @media(max-width:600px){
   .playback-settings{flex-wrap:wrap}
 }
+.advanced-settings{margin-top:22px;border-top:1px solid #c2ccb5;padding-top:16px}.advanced-settings summary{font-size:12px;font-weight:700;cursor:pointer;color:#294f3e}.advanced-settings label{margin-top:16px}.advanced-settings summary:focus-visible{outline:3px solid #98662e;outline-offset:4px}.score-panel{min-width:0}.notation-scroll:focus-visible{outline:3px solid #98662e;outline-offset:-4px}
+/* Keep transport near the beginning of long studies. */
+.playback{border-bottom:1px solid #eaeee3}.score-meta{flex-wrap:wrap}
