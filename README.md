@@ -1,14 +1,23 @@
 # ClarinetLab
-A local React + TypeScript + Vite music-practice studio. Existing app expanded under CORE_ENGINE_SPEC.md; master vision remains PRODUCT_SPEC.md.
+A local React + TypeScript + Vite clarinet practice studio. PRODUCT_SPEC.md preserves the master vision; VERSION_3_SPEC.md defines the current music-engine extension.
 
 ## Run and verify
-With Node.js and pnpm: pnpm install --frozen-lockfile, pnpm dev, then open the printed local URL. pnpm test runs automated regressions; pnpm build type-checks and produces dist/.
-The active task preview uses http://127.0.0.1:5175/.
-This computer also has bundled Node/pnpm under C:/Users/felip/.cache/codex-runtimes/codex-primary-runtime/dependencies/.
+With Node.js and pnpm installed:
 
-## Features
-Four difficulty levels,13 major keys,3/4 and4/4,1–128 measures, reproducible seeds, exact integer-tick rhythms, rests, ties, slurs, articulations and dynamics. Expand Musical expression to customize rhythm/rest/articulation/dynamics and sight-reading/scale-fragment/rhythm focus. Settings apply on Generate; tempo applies to playback without changing rhythmic values.
+```sh
+pnpm install --frozen-lockfile
+pnpm dev
+pnpm test
+pnpm build
+```
 
-Notation uses abcjs. Audio uses actual recorded FluidR3 clarinet buffers, centralized B-flat transposition, WebAudio timing/envelopes and approximate recorded sustain loops for long notes. Dynamics are gain-based, not timbral layers. Initial samples need internet.
+Open the URL printed by Vite. The current development preview is http://127.0.0.1:5175/.
 
-See ENGINE_ARCHITECTURE.md for module/data ownership, QA.md for audit evidence and manual acceptance checks, and AUDIO_LICENSE.md for attribution and expressive limitations. Tuplets, accounts, microphone analysis, history and guided learning are not implemented.
+## Practice
+Choose difficulty, written tonic, meter and length. Expand Advanced settings for tonality, rhythm, register, technique, articulation, dynamics, ornaments and tempo expression. Generate applies settings; the playback tempo slider changes performance speed without changing written rhythms. The same seed and settings reproduce the same score.
+
+Generate V3 demonstration creates a new 32-bar A-major study in 6/8 at dotted-quarter = 72. Regenerable examples are in examples/version3; run `node scripts/generate-examples.mjs` to rebuild them.
+
+Notation uses abcjs. Playback uses recorded FluidR3 clarinet samples with centralized B-flat transposition, WebAudio scheduling and recorded sustain loops. Initial sample loading requires internet. Dynamics are gain-based; realistic listening quality still needs musician review.
+
+See VERSION_3_ARCHITECTURE.md for the model and module boundaries, VERSION_3_QA.md for automated evidence, limitations and manual checks, and AUDIO_LICENSE.md for sample attribution. Guided learning, accounts and microphone assessment remain outside this work.

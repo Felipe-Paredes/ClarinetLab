@@ -1,0 +1,3713 @@
+{
+  "seed": 1729,
+  "passage": {
+    "options": {
+      "rhythm": "complex",
+      "articulation": "mixed",
+      "articulationComplexity": "patterned",
+      "dynamics": "expressive",
+      "restFrequency": "medium",
+      "exerciseType": "sight-reading",
+      "tonality": "major",
+      "key": "A",
+      "meter": 4,
+      "timeSignature": "6/8",
+      "tempo": 72,
+      "tempoWord": "Andante",
+      "difficulty": "expert",
+      "measures": 32,
+      "articulationProbability": 1,
+      "dynamicMin": "p",
+      "dynamicMax": "ff",
+      "registerFocus": "transitions",
+      "intervalComplexity": "balanced",
+      "ornamentFrequency": "none",
+      "phrasing": "developed",
+      "tempoExpression": "none"
+    },
+    "bars": [
+      [
+        {
+          "kind": "note",
+          "midi": 74,
+          "ticks": 144,
+          "beats": 1.5,
+          "spelling": {
+            "letter": "D",
+            "accidental": 0,
+            "octave": 5
+          },
+          "articulation": "legato",
+          "slurStart": true,
+          "dynamic": "p",
+          "hairpinStart": "crescendo"
+        },
+        {
+          "kind": "note",
+          "midi": 76,
+          "ticks": 72,
+          "beats": 0.75,
+          "spelling": {
+            "letter": "E",
+            "accidental": 0,
+            "octave": 5
+          },
+          "articulation": "legato"
+        },
+        {
+          "kind": "note",
+          "midi": 74,
+          "ticks": 24,
+          "beats": 0.25,
+          "spelling": {
+            "letter": "D",
+            "accidental": 0,
+            "octave": 5
+          },
+          "articulation": "legato"
+        },
+        {
+          "kind": "note",
+          "midi": 74,
+          "ticks": 48,
+          "beats": 0.5,
+          "spelling": {
+            "letter": "D",
+            "accidental": 0,
+            "octave": 5
+          },
+          "articulation": "legato",
+          "slurEnd": true
+        }
+      ],
+      [
+        {
+          "kind": "note",
+          "midi": 76,
+          "ticks": 72,
+          "beats": 0.75,
+          "spelling": {
+            "letter": "E",
+            "accidental": 0,
+            "octave": 5
+          },
+          "articulation": "marcato",
+          "hairpinEnd": true,
+          "dynamic": "ff"
+        },
+        {
+          "kind": "note",
+          "midi": 74,
+          "ticks": 24,
+          "beats": 0.25,
+          "spelling": {
+            "letter": "D",
+            "accidental": 0,
+            "octave": 5
+          },
+          "articulation": "tenuto",
+          "hairpinStart": "diminuendo"
+        },
+        {
+          "kind": "rest",
+          "midi": -1,
+          "ticks": 48,
+          "beats": 0.5
+        },
+        {
+          "kind": "note",
+          "midi": 66,
+          "ticks": 72,
+          "beats": 0.75,
+          "spelling": {
+            "letter": "F",
+            "accidental": 1,
+            "octave": 4
+          },
+          "articulation": "marcato"
+        },
+        {
+          "kind": "note",
+          "midi": 74,
+          "ticks": 24,
+          "beats": 0.25,
+          "spelling": {
+            "letter": "D",
+            "accidental": 0,
+            "octave": 5
+          },
+          "articulation": "portato"
+        },
+        {
+          "kind": "note",
+          "midi": 76,
+          "ticks": 48,
+          "beats": 0.5,
+          "spelling": {
+            "letter": "E",
+            "accidental": 0,
+            "octave": 5
+          },
+          "tieToNext": true,
+          "articulation": "staccatissimo"
+        }
+      ],
+      [
+        {
+          "kind": "note",
+          "midi": 76,
+          "ticks": 48,
+          "beats": 0.5,
+          "spelling": {
+            "letter": "E",
+            "accidental": 0,
+            "octave": 5
+          },
+          "articulation": "unmarked"
+        },
+        {
+          "kind": "note",
+          "midi": 74,
+          "ticks": 48,
+          "beats": 0.5,
+          "spelling": {
+            "letter": "D",
+            "accidental": 0,
+            "octave": 5
+          },
+          "articulation": "unmarked"
+        },
+        {
+          "kind": "note",
+          "midi": 76,
+          "ticks": 48,
+          "beats": 0.5,
+          "spelling": {
+            "letter": "E",
+            "accidental": 0,
+            "octave": 5
+          },
+          "articulation": "portato"
+        },
+        {
+          "kind": "note",
+          "midi": 74,
+          "ticks": 48,
+          "beats": 0.5,
+          "spelling": {
+            "letter": "D",
+            "accidental": 0,
+            "octave": 5
+          },
+          "articulation": "staccatissimo"
+        },
+        {
+          "kind": "note",
+          "midi": 66,
+          "ticks": 48,
+          "beats": 0.5,
+          "spelling": {
+            "letter": "F",
+            "accidental": 1,
+            "octave": 4
+          },
+          "articulation": "legato",
+          "slurStart": true
+        },
+        {
+          "kind": "note",
+          "midi": 66,
+          "ticks": 48,
+          "beats": 0.5,
+          "spelling": {
+            "letter": "F",
+            "accidental": 1,
+            "octave": 4
+          },
+          "articulation": "legato",
+          "slurEnd": true
+        }
+      ],
+      [
+        {
+          "kind": "note",
+          "midi": 74,
+          "ticks": 72,
+          "beats": 0.75,
+          "spelling": {
+            "letter": "D",
+            "accidental": 0,
+            "octave": 5
+          },
+          "articulation": "marcato"
+        },
+        {
+          "kind": "note",
+          "midi": 76,
+          "ticks": 24,
+          "beats": 0.25,
+          "spelling": {
+            "letter": "E",
+            "accidental": 0,
+            "octave": 5
+          },
+          "articulation": "staccatissimo"
+        },
+        {
+          "kind": "note",
+          "midi": 74,
+          "ticks": 48,
+          "beats": 0.5,
+          "spelling": {
+            "letter": "D",
+            "accidental": 0,
+            "octave": 5
+          },
+          "articulation": "legato",
+          "slurStart": true
+        },
+        {
+          "kind": "note",
+          "midi": 74,
+          "ticks": 72,
+          "beats": 0.75,
+          "spelling": {
+            "letter": "D",
+            "accidental": 0,
+            "octave": 5
+          },
+          "articulation": "legato",
+          "slurEnd": true
+        },
+        {
+          "kind": "note",
+          "midi": 76,
+          "ticks": 24,
+          "beats": 0.25,
+          "spelling": {
+            "letter": "E",
+            "accidental": 0,
+            "octave": 5
+          },
+          "articulation": "staccato"
+        },
+        {
+          "kind": "note",
+          "midi": 69,
+          "ticks": 48,
+          "beats": 0.5,
+          "spelling": {
+            "letter": "A",
+            "accidental": 0,
+            "octave": 4
+          },
+          "breath": true,
+          "articulation": "tenuto",
+          "hairpinEnd": true,
+          "dynamic": "p"
+        }
+      ],
+      [
+        {
+          "kind": "note",
+          "midi": 74,
+          "ticks": 72,
+          "beats": 0.75,
+          "spelling": {
+            "letter": "D",
+            "accidental": 0,
+            "octave": 5
+          },
+          "articulation": "legato",
+          "slurStart": true,
+          "dynamic": "mp",
+          "hairpinStart": "crescendo",
+          "expressionText": "cresc.",
+          "emphasis": "sfz"
+        },
+        {
+          "kind": "note",
+          "midi": 74,
+          "ticks": 24,
+          "beats": 0.25,
+          "spelling": {
+            "letter": "D",
+            "accidental": 0,
+            "octave": 5
+          },
+          "articulation": "legato"
+        },
+        {
+          "kind": "note",
+          "midi": 66,
+          "ticks": 48,
+          "beats": 0.5,
+          "spelling": {
+            "letter": "F",
+            "accidental": 1,
+            "octave": 4
+          },
+          "articulation": "legato",
+          "slurEnd": true
+        },
+        {
+          "kind": "rest",
+          "midi": -1,
+          "ticks": 24,
+          "beats": 0.25
+        },
+        {
+          "kind": "note",
+          "midi": 66,
+          "ticks": 24,
+          "beats": 0.25,
+          "spelling": {
+            "letter": "F",
+            "accidental": 1,
+            "octave": 4
+          },
+          "articulation": "unmarked"
+        },
+        {
+          "kind": "note",
+          "midi": 66,
+          "ticks": 48,
+          "beats": 0.5,
+          "spelling": {
+            "letter": "F",
+            "accidental": 1,
+            "octave": 4
+          },
+          "articulation": "unmarked"
+        },
+        {
+          "kind": "note",
+          "midi": 68,
+          "ticks": 24,
+          "beats": 0.25,
+          "spelling": {
+            "letter": "G",
+            "accidental": 1,
+            "octave": 4
+          },
+          "articulation": "portato"
+        },
+        {
+          "kind": "note",
+          "midi": 66,
+          "ticks": 24,
+          "beats": 0.25,
+          "spelling": {
+            "letter": "F",
+            "accidental": 1,
+            "octave": 4
+          },
+          "articulation": "staccatissimo"
+        }
+      ],
+      [
+        {
+          "kind": "note",
+          "midi": 74,
+          "ticks": 32,
+          "beats": 0.3333333333333333,
+          "tuplet": {
+            "actual": 3,
+            "normal": 2,
+            "writtenTicks": 48,
+            "group": "5-3-0-0",
+            "start": true
+          },
+          "spelling": {
+            "letter": "D",
+            "accidental": 0,
+            "octave": 5
+          },
+          "articulation": "marcato",
+          "hairpinEnd": true,
+          "dynamic": "f"
+        },
+        {
+          "kind": "note",
+          "midi": 74,
+          "ticks": 32,
+          "beats": 0.3333333333333333,
+          "tuplet": {
+            "actual": 3,
+            "normal": 2,
+            "writtenTicks": 48,
+            "group": "5-3-0-0",
+            "start": false
+          },
+          "spelling": {
+            "letter": "D",
+            "accidental": 0,
+            "octave": 5
+          },
+          "articulation": "tenuto",
+          "hairpinStart": "diminuendo",
+          "expressionText": "dim."
+        },
+        {
+          "kind": "note",
+          "midi": 66,
+          "ticks": 32,
+          "beats": 0.3333333333333333,
+          "tuplet": {
+            "actual": 3,
+            "normal": 2,
+            "writtenTicks": 48,
+            "group": "5-3-0-0",
+            "start": false
+          },
+          "spelling": {
+            "letter": "F",
+            "accidental": 1,
+            "octave": 4
+          },
+          "articulation": "unmarked"
+        },
+        {
+          "kind": "note",
+          "midi": 68,
+          "ticks": 48,
+          "beats": 0.5,
+          "spelling": {
+            "letter": "G",
+            "accidental": 1,
+            "octave": 4
+          },
+          "articulation": "unmarked"
+        },
+        {
+          "kind": "note",
+          "midi": 66,
+          "ticks": 48,
+          "beats": 0.5,
+          "spelling": {
+            "letter": "F",
+            "accidental": 1,
+            "octave": 4
+          },
+          "articulation": "portato"
+        },
+        {
+          "kind": "note",
+          "midi": 66,
+          "ticks": 24,
+          "beats": 0.25,
+          "spelling": {
+            "letter": "F",
+            "accidental": 1,
+            "octave": 4
+          },
+          "articulation": "staccatissimo"
+        },
+        {
+          "kind": "rest",
+          "midi": -1,
+          "ticks": 48,
+          "beats": 0.5
+        },
+        {
+          "kind": "note",
+          "midi": 66,
+          "ticks": 24,
+          "beats": 0.25,
+          "spelling": {
+            "letter": "F",
+            "accidental": 1,
+            "octave": 4
+          },
+          "articulation": "legato"
+        }
+      ],
+      [
+        {
+          "kind": "rest",
+          "midi": -1,
+          "ticks": 72,
+          "beats": 0.75
+        },
+        {
+          "kind": "note",
+          "midi": 74,
+          "ticks": 24,
+          "beats": 0.25,
+          "spelling": {
+            "letter": "D",
+            "accidental": 0,
+            "octave": 5
+          },
+          "articulation": "unmarked"
+        },
+        {
+          "kind": "rest",
+          "midi": -1,
+          "ticks": 48,
+          "beats": 0.5
+        },
+        {
+          "kind": "note",
+          "midi": 68,
+          "ticks": 32,
+          "beats": 0.3333333333333333,
+          "tuplet": {
+            "actual": 3,
+            "normal": 2,
+            "writtenTicks": 48,
+            "group": "6-2-1-0",
+            "start": true
+          },
+          "spelling": {
+            "letter": "G",
+            "accidental": 1,
+            "octave": 4
+          },
+          "articulation": "staccatissimo"
+        },
+        {
+          "kind": "note",
+          "midi": 66,
+          "ticks": 32,
+          "beats": 0.3333333333333333,
+          "tuplet": {
+            "actual": 3,
+            "normal": 2,
+            "writtenTicks": 48,
+            "group": "6-2-1-0",
+            "start": false
+          },
+          "spelling": {
+            "letter": "F",
+            "accidental": 1,
+            "octave": 4
+          },
+          "articulation": "legato",
+          "slurStart": true
+        },
+        {
+          "kind": "note",
+          "midi": 66,
+          "ticks": 32,
+          "beats": 0.3333333333333333,
+          "tuplet": {
+            "actual": 3,
+            "normal": 2,
+            "writtenTicks": 48,
+            "group": "6-2-1-0",
+            "start": false
+          },
+          "spelling": {
+            "letter": "F",
+            "accidental": 1,
+            "octave": 4
+          },
+          "articulation": "legato",
+          "slurEnd": true
+        },
+        {
+          "kind": "note",
+          "midi": 68,
+          "ticks": 48,
+          "beats": 0.5,
+          "spelling": {
+            "letter": "G",
+            "accidental": 1,
+            "octave": 4
+          },
+          "articulation": "staccato"
+        }
+      ],
+      [
+        {
+          "kind": "note",
+          "midi": 66,
+          "ticks": 24,
+          "beats": 0.25,
+          "spelling": {
+            "letter": "F",
+            "accidental": 1,
+            "octave": 4
+          },
+          "articulation": "marcato"
+        },
+        {
+          "kind": "note",
+          "midi": 74,
+          "ticks": 24,
+          "beats": 0.25,
+          "spelling": {
+            "letter": "D",
+            "accidental": 0,
+            "octave": 5
+          },
+          "articulation": "staccatissimo"
+        },
+        {
+          "kind": "note",
+          "midi": 74,
+          "ticks": 48,
+          "beats": 0.5,
+          "spelling": {
+            "letter": "D",
+            "accidental": 0,
+            "octave": 5
+          },
+          "articulation": "legato",
+          "slurStart": true
+        },
+        {
+          "kind": "note",
+          "midi": 66,
+          "ticks": 24,
+          "beats": 0.25,
+          "spelling": {
+            "letter": "F",
+            "accidental": 1,
+            "octave": 4
+          },
+          "articulation": "legato",
+          "slurEnd": true
+        },
+        {
+          "kind": "note",
+          "midi": 68,
+          "ticks": 24,
+          "beats": 0.25,
+          "spelling": {
+            "letter": "G",
+            "accidental": 1,
+            "octave": 4
+          },
+          "articulation": "staccato"
+        },
+        {
+          "kind": "rest",
+          "midi": -1,
+          "ticks": 48,
+          "beats": 0.5
+        },
+        {
+          "kind": "note",
+          "midi": 66,
+          "ticks": 24,
+          "beats": 0.25,
+          "spelling": {
+            "letter": "F",
+            "accidental": 1,
+            "octave": 4
+          },
+          "articulation": "unmarked"
+        },
+        {
+          "kind": "note",
+          "midi": 68,
+          "ticks": 48,
+          "beats": 0.5,
+          "spelling": {
+            "letter": "G",
+            "accidental": 1,
+            "octave": 4
+          },
+          "articulation": "unmarked"
+        },
+        {
+          "kind": "note",
+          "midi": 69,
+          "ticks": 24,
+          "beats": 0.25,
+          "spelling": {
+            "letter": "A",
+            "accidental": 0,
+            "octave": 4
+          },
+          "breath": true,
+          "articulation": "portato",
+          "hairpinEnd": true,
+          "dynamic": "mp"
+        }
+      ],
+      [
+        {
+          "kind": "note",
+          "midi": 71,
+          "ticks": 32,
+          "beats": 0.3333333333333333,
+          "tuplet": {
+            "actual": 3,
+            "normal": 2,
+            "writtenTicks": 48,
+            "group": "8-4-0-0",
+            "start": true
+          },
+          "spelling": {
+            "letter": "B",
+            "accidental": 0,
+            "octave": 4
+          },
+          "articulation": "legato",
+          "slurStart": true,
+          "dynamic": "mf",
+          "hairpinStart": "crescendo"
+        },
+        {
+          "kind": "note",
+          "midi": 71,
+          "ticks": 32,
+          "beats": 0.3333333333333333,
+          "tuplet": {
+            "actual": 3,
+            "normal": 2,
+            "writtenTicks": 48,
+            "group": "8-4-0-0",
+            "start": false
+          },
+          "spelling": {
+            "letter": "B",
+            "accidental": 0,
+            "octave": 4
+          },
+          "articulation": "legato"
+        },
+        {
+          "kind": "note",
+          "midi": 73,
+          "ticks": 32,
+          "beats": 0.3333333333333333,
+          "tuplet": {
+            "actual": 3,
+            "normal": 2,
+            "writtenTicks": 48,
+            "group": "8-4-0-0",
+            "start": false
+          },
+          "spelling": {
+            "letter": "C",
+            "accidental": 1,
+            "octave": 5
+          },
+          "articulation": "legato"
+        },
+        {
+          "kind": "note",
+          "midi": 74,
+          "ticks": 48,
+          "beats": 0.5,
+          "spelling": {
+            "letter": "D",
+            "accidental": 0,
+            "octave": 5
+          },
+          "articulation": "legato",
+          "slurEnd": true
+        },
+        {
+          "kind": "note",
+          "midi": 76,
+          "ticks": 48,
+          "beats": 0.5,
+          "spelling": {
+            "letter": "E",
+            "accidental": 0,
+            "octave": 5
+          },
+          "articulation": "accent"
+        },
+        {
+          "kind": "note",
+          "midi": 76,
+          "ticks": 24,
+          "beats": 0.25,
+          "spelling": {
+            "letter": "E",
+            "accidental": 0,
+            "octave": 5
+          },
+          "articulation": "unmarked"
+        },
+        {
+          "kind": "note",
+          "midi": 74,
+          "ticks": 48,
+          "beats": 0.5,
+          "spelling": {
+            "letter": "D",
+            "accidental": 0,
+            "octave": 5
+          },
+          "articulation": "portato"
+        },
+        {
+          "kind": "note",
+          "midi": 76,
+          "ticks": 24,
+          "beats": 0.25,
+          "spelling": {
+            "letter": "E",
+            "accidental": 0,
+            "octave": 5
+          },
+          "articulation": "staccatissimo",
+          "hairpinEnd": true,
+          "dynamic": "ff"
+        }
+      ],
+      [
+        {
+          "kind": "note",
+          "midi": 68,
+          "ticks": 48,
+          "beats": 0.5,
+          "spelling": {
+            "letter": "G",
+            "accidental": 1,
+            "octave": 4
+          },
+          "articulation": "marcato",
+          "hairpinStart": "diminuendo"
+        },
+        {
+          "kind": "note",
+          "midi": 68,
+          "ticks": 24,
+          "beats": 0.25,
+          "spelling": {
+            "letter": "G",
+            "accidental": 1,
+            "octave": 4
+          },
+          "articulation": "tenuto"
+        },
+        {
+          "kind": "note",
+          "midi": 76,
+          "ticks": 48,
+          "beats": 0.5,
+          "spelling": {
+            "letter": "E",
+            "accidental": 0,
+            "octave": 5
+          },
+          "articulation": "unmarked"
+        },
+        {
+          "kind": "note",
+          "midi": 74,
+          "ticks": 24,
+          "beats": 0.25,
+          "spelling": {
+            "letter": "D",
+            "accidental": 0,
+            "octave": 5
+          },
+          "articulation": "unmarked"
+        },
+        {
+          "kind": "note",
+          "midi": 76,
+          "ticks": 12,
+          "beats": 0.125,
+          "spelling": {
+            "letter": "E",
+            "accidental": 0,
+            "octave": 5
+          },
+          "articulation": "portato"
+        },
+        {
+          "kind": "rest",
+          "midi": -1,
+          "ticks": 12,
+          "beats": 0.125
+        },
+        {
+          "kind": "note",
+          "midi": 74,
+          "ticks": 12,
+          "beats": 0.125,
+          "spelling": {
+            "letter": "D",
+            "accidental": 0,
+            "octave": 5
+          },
+          "articulation": "legato",
+          "slurStart": true
+        },
+        {
+          "kind": "note",
+          "midi": 76,
+          "ticks": 12,
+          "beats": 0.125,
+          "spelling": {
+            "letter": "E",
+            "accidental": 0,
+            "octave": 5
+          },
+          "articulation": "legato",
+          "slurEnd": true
+        },
+        {
+          "kind": "rest",
+          "midi": -1,
+          "ticks": 12,
+          "beats": 0.125
+        },
+        {
+          "kind": "note",
+          "midi": 68,
+          "ticks": 12,
+          "beats": 0.125,
+          "spelling": {
+            "letter": "G",
+            "accidental": 1,
+            "octave": 4
+          },
+          "articulation": "tenuto"
+        },
+        {
+          "kind": "note",
+          "midi": 76,
+          "ticks": 12,
+          "beats": 0.125,
+          "spelling": {
+            "letter": "E",
+            "accidental": 0,
+            "octave": 5
+          },
+          "articulation": "unmarked"
+        },
+        {
+          "kind": "note",
+          "midi": 74,
+          "ticks": 12,
+          "beats": 0.125,
+          "spelling": {
+            "letter": "D",
+            "accidental": 0,
+            "octave": 5
+          },
+          "articulation": "unmarked"
+        },
+        {
+          "kind": "note",
+          "midi": 76,
+          "ticks": 12,
+          "beats": 0.125,
+          "spelling": {
+            "letter": "E",
+            "accidental": 0,
+            "octave": 5
+          },
+          "articulation": "portato"
+        },
+        {
+          "kind": "note",
+          "midi": 76,
+          "ticks": 12,
+          "beats": 0.125,
+          "spelling": {
+            "letter": "E",
+            "accidental": 0,
+            "octave": 5
+          },
+          "articulation": "staccatissimo"
+        },
+        {
+          "kind": "note",
+          "midi": 74,
+          "ticks": 12,
+          "beats": 0.125,
+          "spelling": {
+            "letter": "D",
+            "accidental": 0,
+            "octave": 5
+          },
+          "articulation": "legato",
+          "slurStart": true
+        },
+        {
+          "kind": "note",
+          "midi": 76,
+          "ticks": 12,
+          "beats": 0.125,
+          "spelling": {
+            "letter": "E",
+            "accidental": 0,
+            "octave": 5
+          },
+          "articulation": "legato",
+          "slurEnd": true
+        }
+      ],
+      [
+        {
+          "kind": "note",
+          "midi": 68,
+          "ticks": 32,
+          "beats": 0.3333333333333333,
+          "tuplet": {
+            "actual": 3,
+            "normal": 2,
+            "writtenTicks": 48,
+            "group": "10-4-0-0",
+            "start": true
+          },
+          "spelling": {
+            "letter": "G",
+            "accidental": 1,
+            "octave": 4
+          },
+          "articulation": "accent"
+        },
+        {
+          "kind": "note",
+          "midi": 68,
+          "ticks": 32,
+          "beats": 0.3333333333333333,
+          "tuplet": {
+            "actual": 3,
+            "normal": 2,
+            "writtenTicks": 48,
+            "group": "10-4-0-0",
+            "start": false
+          },
+          "spelling": {
+            "letter": "G",
+            "accidental": 1,
+            "octave": 4
+          },
+          "articulation": "unmarked"
+        },
+        {
+          "kind": "note",
+          "midi": 76,
+          "ticks": 32,
+          "beats": 0.3333333333333333,
+          "tuplet": {
+            "actual": 3,
+            "normal": 2,
+            "writtenTicks": 48,
+            "group": "10-4-0-0",
+            "start": false
+          },
+          "spelling": {
+            "letter": "E",
+            "accidental": 0,
+            "octave": 5
+          },
+          "articulation": "portato"
+        },
+        {
+          "kind": "note",
+          "midi": 74,
+          "ticks": 48,
+          "beats": 0.5,
+          "spelling": {
+            "letter": "D",
+            "accidental": 0,
+            "octave": 5
+          },
+          "articulation": "staccatissimo"
+        },
+        {
+          "kind": "note",
+          "midi": 76,
+          "ticks": 48,
+          "beats": 0.5,
+          "spelling": {
+            "letter": "E",
+            "accidental": 0,
+            "octave": 5
+          },
+          "articulation": "legato",
+          "slurStart": true
+        },
+        {
+          "kind": "note",
+          "midi": 76,
+          "ticks": 24,
+          "beats": 0.25,
+          "spelling": {
+            "letter": "E",
+            "accidental": 0,
+            "octave": 5
+          },
+          "articulation": "legato",
+          "slurEnd": true
+        },
+        {
+          "kind": "note",
+          "midi": 74,
+          "ticks": 48,
+          "beats": 0.5,
+          "spelling": {
+            "letter": "D",
+            "accidental": 0,
+            "octave": 5
+          },
+          "articulation": "staccato"
+        },
+        {
+          "kind": "note",
+          "midi": 76,
+          "ticks": 24,
+          "beats": 0.25,
+          "spelling": {
+            "letter": "E",
+            "accidental": 0,
+            "octave": 5
+          },
+          "articulation": "tenuto"
+        }
+      ],
+      [
+        {
+          "kind": "note",
+          "midi": 68,
+          "ticks": 84,
+          "beats": 0.875,
+          "spelling": {
+            "letter": "G",
+            "accidental": 1,
+            "octave": 4
+          },
+          "articulation": "marcato"
+        },
+        {
+          "kind": "note",
+          "midi": 68,
+          "ticks": 12,
+          "beats": 0.125,
+          "spelling": {
+            "letter": "G",
+            "accidental": 1,
+            "octave": 4
+          },
+          "articulation": "staccatissimo"
+        },
+        {
+          "kind": "note",
+          "midi": 76,
+          "ticks": 48,
+          "beats": 0.5,
+          "spelling": {
+            "letter": "E",
+            "accidental": 0,
+            "octave": 5
+          },
+          "articulation": "legato",
+          "slurStart": true
+        },
+        {
+          "kind": "note",
+          "midi": 74,
+          "ticks": 84,
+          "beats": 0.875,
+          "spelling": {
+            "letter": "D",
+            "accidental": 0,
+            "octave": 5
+          },
+          "articulation": "legato",
+          "slurEnd": true
+        },
+        {
+          "kind": "note",
+          "midi": 76,
+          "ticks": 12,
+          "beats": 0.125,
+          "spelling": {
+            "letter": "E",
+            "accidental": 0,
+            "octave": 5
+          },
+          "articulation": "staccato"
+        },
+        {
+          "kind": "note",
+          "midi": 69,
+          "ticks": 48,
+          "beats": 0.5,
+          "spelling": {
+            "letter": "A",
+            "accidental": 0,
+            "octave": 4
+          },
+          "breath": true,
+          "articulation": "tenuto",
+          "hairpinEnd": true,
+          "dynamic": "mf"
+        }
+      ],
+      [
+        {
+          "kind": "note",
+          "midi": 71,
+          "ticks": 144,
+          "beats": 1.5,
+          "spelling": {
+            "letter": "B",
+            "accidental": 0,
+            "octave": 4
+          },
+          "articulation": "legato",
+          "slurStart": true,
+          "dynamic": "p",
+          "hairpinStart": "crescendo",
+          "expressionText": "cresc.",
+          "emphasis": "sf"
+        },
+        {
+          "kind": "note",
+          "midi": 73,
+          "ticks": 72,
+          "beats": 0.75,
+          "spelling": {
+            "letter": "C",
+            "accidental": 1,
+            "octave": 5
+          },
+          "articulation": "legato"
+        },
+        {
+          "kind": "note",
+          "midi": 68,
+          "ticks": 24,
+          "beats": 0.25,
+          "spelling": {
+            "letter": "G",
+            "accidental": 1,
+            "octave": 4
+          },
+          "articulation": "legato",
+          "slurEnd": true
+        },
+        {
+          "kind": "rest",
+          "midi": -1,
+          "ticks": 48,
+          "beats": 0.5
+        }
+      ],
+      [
+        {
+          "kind": "note",
+          "midi": 76,
+          "ticks": 72,
+          "beats": 0.75,
+          "spelling": {
+            "letter": "E",
+            "accidental": 0,
+            "octave": 5
+          },
+          "articulation": "marcato",
+          "hairpinEnd": true,
+          "dynamic": "f"
+        },
+        {
+          "kind": "note",
+          "midi": 74,
+          "ticks": 24,
+          "beats": 0.25,
+          "spelling": {
+            "letter": "D",
+            "accidental": 0,
+            "octave": 5
+          },
+          "articulation": "tenuto",
+          "hairpinStart": "diminuendo",
+          "expressionText": "dim."
+        },
+        {
+          "kind": "note",
+          "midi": 76,
+          "ticks": 48,
+          "beats": 0.5,
+          "spelling": {
+            "letter": "E",
+            "accidental": 0,
+            "octave": 5
+          },
+          "articulation": "unmarked"
+        },
+        {
+          "kind": "note",
+          "midi": 76,
+          "ticks": 72,
+          "beats": 0.75,
+          "spelling": {
+            "letter": "E",
+            "accidental": 0,
+            "octave": 5
+          },
+          "articulation": "marcato"
+        },
+        {
+          "kind": "rest",
+          "midi": -1,
+          "ticks": 24,
+          "beats": 0.25
+        },
+        {
+          "kind": "note",
+          "midi": 76,
+          "ticks": 48,
+          "beats": 0.5,
+          "spelling": {
+            "letter": "E",
+            "accidental": 0,
+            "octave": 5
+          },
+          "tieToNext": true,
+          "articulation": "staccatissimo"
+        }
+      ],
+      [
+        {
+          "kind": "note",
+          "midi": 76,
+          "ticks": 144,
+          "beats": 1.5,
+          "spelling": {
+            "letter": "E",
+            "accidental": 0,
+            "octave": 5
+          },
+          "articulation": "unmarked"
+        },
+        {
+          "kind": "rest",
+          "midi": -1,
+          "ticks": 48,
+          "beats": 0.5
+        },
+        {
+          "kind": "note",
+          "midi": 76,
+          "ticks": 48,
+          "beats": 0.5,
+          "spelling": {
+            "letter": "E",
+            "accidental": 0,
+            "octave": 5
+          },
+          "articulation": "portato"
+        },
+        {
+          "kind": "note",
+          "midi": 74,
+          "ticks": 48,
+          "beats": 0.5,
+          "spelling": {
+            "letter": "D",
+            "accidental": 0,
+            "octave": 5
+          },
+          "articulation": "staccatissimo"
+        }
+      ],
+      [
+        {
+          "kind": "note",
+          "midi": 76,
+          "ticks": 48,
+          "beats": 0.5,
+          "spelling": {
+            "letter": "E",
+            "accidental": 0,
+            "octave": 5
+          },
+          "articulation": "marcato"
+        },
+        {
+          "kind": "note",
+          "midi": 76,
+          "ticks": 48,
+          "beats": 0.5,
+          "spelling": {
+            "letter": "E",
+            "accidental": 0,
+            "octave": 5
+          },
+          "articulation": "staccatissimo"
+        },
+        {
+          "kind": "note",
+          "midi": 74,
+          "ticks": 48,
+          "beats": 0.5,
+          "spelling": {
+            "letter": "D",
+            "accidental": 0,
+            "octave": 5
+          },
+          "articulation": "legato",
+          "slurStart": true
+        },
+        {
+          "kind": "note",
+          "midi": 76,
+          "ticks": 72,
+          "beats": 0.75,
+          "spelling": {
+            "letter": "E",
+            "accidental": 0,
+            "octave": 5
+          },
+          "articulation": "legato",
+          "slurEnd": true
+        },
+        {
+          "kind": "rest",
+          "midi": -1,
+          "ticks": 24,
+          "beats": 0.25
+        },
+        {
+          "kind": "note",
+          "midi": 69,
+          "ticks": 48,
+          "beats": 0.5,
+          "spelling": {
+            "letter": "A",
+            "accidental": 0,
+            "octave": 4
+          },
+          "breath": true,
+          "articulation": "tenuto",
+          "hairpinEnd": true,
+          "dynamic": "p"
+        }
+      ],
+      [
+        {
+          "kind": "rest",
+          "midi": -1,
+          "ticks": 72,
+          "beats": 0.75
+        },
+        {
+          "kind": "note",
+          "midi": 76,
+          "ticks": 24,
+          "beats": 0.25,
+          "spelling": {
+            "letter": "E",
+            "accidental": 0,
+            "octave": 5
+          },
+          "articulation": "legato",
+          "slurStart": true,
+          "dynamic": "mp",
+          "hairpinStart": "crescendo"
+        },
+        {
+          "kind": "note",
+          "midi": 74,
+          "ticks": 48,
+          "beats": 0.5,
+          "spelling": {
+            "letter": "D",
+            "accidental": 0,
+            "octave": 5
+          },
+          "articulation": "legato"
+        },
+        {
+          "kind": "note",
+          "midi": 74,
+          "ticks": 32,
+          "beats": 0.3333333333333333,
+          "tuplet": {
+            "actual": 3,
+            "normal": 2,
+            "writtenTicks": 48,
+            "group": "16-2-1-0",
+            "start": true
+          },
+          "spelling": {
+            "letter": "D",
+            "accidental": 0,
+            "octave": 5
+          },
+          "articulation": "legato",
+          "slurEnd": true
+        },
+        {
+          "kind": "note",
+          "midi": 76,
+          "ticks": 32,
+          "beats": 0.3333333333333333,
+          "tuplet": {
+            "actual": 3,
+            "normal": 2,
+            "writtenTicks": 48,
+            "group": "16-2-1-0",
+            "start": false
+          },
+          "spelling": {
+            "letter": "E",
+            "accidental": 0,
+            "octave": 5
+          },
+          "articulation": "unmarked"
+        },
+        {
+          "kind": "note",
+          "midi": 74,
+          "ticks": 32,
+          "beats": 0.3333333333333333,
+          "tuplet": {
+            "actual": 3,
+            "normal": 2,
+            "writtenTicks": 48,
+            "group": "16-2-1-0",
+            "start": false
+          },
+          "spelling": {
+            "letter": "D",
+            "accidental": 0,
+            "octave": 5
+          },
+          "articulation": "unmarked"
+        },
+        {
+          "kind": "note",
+          "midi": 66,
+          "ticks": 48,
+          "beats": 0.5,
+          "spelling": {
+            "letter": "F",
+            "accidental": 1,
+            "octave": 4
+          },
+          "articulation": "portato"
+        }
+      ],
+      [
+        {
+          "kind": "note",
+          "midi": 66,
+          "ticks": 32,
+          "beats": 0.3333333333333333,
+          "tuplet": {
+            "actual": 3,
+            "normal": 2,
+            "writtenTicks": 48,
+            "group": "17-3-0-0",
+            "start": true
+          },
+          "spelling": {
+            "letter": "F",
+            "accidental": 1,
+            "octave": 4
+          },
+          "articulation": "marcato"
+        },
+        {
+          "kind": "note",
+          "midi": 74,
+          "ticks": 32,
+          "beats": 0.3333333333333333,
+          "tuplet": {
+            "actual": 3,
+            "normal": 2,
+            "writtenTicks": 48,
+            "group": "17-3-0-0",
+            "start": false
+          },
+          "spelling": {
+            "letter": "D",
+            "accidental": 0,
+            "octave": 5
+          },
+          "articulation": "tenuto"
+        },
+        {
+          "kind": "note",
+          "midi": 76,
+          "ticks": 32,
+          "beats": 0.3333333333333333,
+          "tuplet": {
+            "actual": 3,
+            "normal": 2,
+            "writtenTicks": 48,
+            "group": "17-3-0-0",
+            "start": false
+          },
+          "spelling": {
+            "letter": "E",
+            "accidental": 0,
+            "octave": 5
+          },
+          "articulation": "unmarked",
+          "hairpinEnd": true,
+          "dynamic": "ff"
+        },
+        {
+          "kind": "note",
+          "midi": 74,
+          "ticks": 48,
+          "beats": 0.5,
+          "spelling": {
+            "letter": "D",
+            "accidental": 0,
+            "octave": 5
+          },
+          "articulation": "unmarked",
+          "hairpinStart": "diminuendo"
+        },
+        {
+          "kind": "note",
+          "midi": 74,
+          "ticks": 48,
+          "beats": 0.5,
+          "spelling": {
+            "letter": "D",
+            "accidental": 0,
+            "octave": 5
+          },
+          "articulation": "portato"
+        },
+        {
+          "kind": "note",
+          "midi": 76,
+          "ticks": 24,
+          "beats": 0.25,
+          "spelling": {
+            "letter": "E",
+            "accidental": 0,
+            "octave": 5
+          },
+          "articulation": "staccatissimo"
+        },
+        {
+          "kind": "rest",
+          "midi": -1,
+          "ticks": 48,
+          "beats": 0.5
+        },
+        {
+          "kind": "note",
+          "midi": 66,
+          "ticks": 24,
+          "beats": 0.25,
+          "spelling": {
+            "letter": "F",
+            "accidental": 1,
+            "octave": 4
+          },
+          "tieToNext": true,
+          "articulation": "legato"
+        }
+      ],
+      [
+        {
+          "kind": "note",
+          "midi": 66,
+          "ticks": 72,
+          "beats": 0.75,
+          "spelling": {
+            "letter": "F",
+            "accidental": 1,
+            "octave": 4
+          },
+          "articulation": "unmarked"
+        },
+        {
+          "kind": "note",
+          "midi": 74,
+          "ticks": 24,
+          "beats": 0.25,
+          "spelling": {
+            "letter": "D",
+            "accidental": 0,
+            "octave": 5
+          },
+          "articulation": "unmarked"
+        },
+        {
+          "kind": "note",
+          "midi": 76,
+          "ticks": 48,
+          "beats": 0.5,
+          "spelling": {
+            "letter": "E",
+            "accidental": 0,
+            "octave": 5
+          },
+          "articulation": "portato"
+        },
+        {
+          "kind": "note",
+          "midi": 74,
+          "ticks": 32,
+          "beats": 0.3333333333333333,
+          "tuplet": {
+            "actual": 3,
+            "normal": 2,
+            "writtenTicks": 48,
+            "group": "18-2-1-0",
+            "start": true
+          },
+          "spelling": {
+            "letter": "D",
+            "accidental": 0,
+            "octave": 5
+          },
+          "articulation": "staccatissimo"
+        },
+        {
+          "kind": "note",
+          "midi": 74,
+          "ticks": 32,
+          "beats": 0.3333333333333333,
+          "tuplet": {
+            "actual": 3,
+            "normal": 2,
+            "writtenTicks": 48,
+            "group": "18-2-1-0",
+            "start": false
+          },
+          "spelling": {
+            "letter": "D",
+            "accidental": 0,
+            "octave": 5
+          },
+          "articulation": "legato",
+          "slurStart": true
+        },
+        {
+          "kind": "note",
+          "midi": 76,
+          "ticks": 32,
+          "beats": 0.3333333333333333,
+          "tuplet": {
+            "actual": 3,
+            "normal": 2,
+            "writtenTicks": 48,
+            "group": "18-2-1-0",
+            "start": false
+          },
+          "spelling": {
+            "letter": "E",
+            "accidental": 0,
+            "octave": 5
+          },
+          "articulation": "legato",
+          "slurEnd": true
+        },
+        {
+          "kind": "rest",
+          "midi": -1,
+          "ticks": 48,
+          "beats": 0.5
+        }
+      ],
+      [
+        {
+          "kind": "note",
+          "midi": 66,
+          "ticks": 24,
+          "beats": 0.25,
+          "spelling": {
+            "letter": "F",
+            "accidental": 1,
+            "octave": 4
+          },
+          "articulation": "marcato"
+        },
+        {
+          "kind": "rest",
+          "midi": -1,
+          "ticks": 24,
+          "beats": 0.25
+        },
+        {
+          "kind": "note",
+          "midi": 74,
+          "ticks": 48,
+          "beats": 0.5,
+          "spelling": {
+            "letter": "D",
+            "accidental": 0,
+            "octave": 5
+          },
+          "articulation": "legato",
+          "slurStart": true
+        },
+        {
+          "kind": "note",
+          "midi": 76,
+          "ticks": 24,
+          "beats": 0.25,
+          "spelling": {
+            "letter": "E",
+            "accidental": 0,
+            "octave": 5
+          },
+          "articulation": "legato",
+          "slurEnd": true
+        },
+        {
+          "kind": "note",
+          "midi": 74,
+          "ticks": 24,
+          "beats": 0.25,
+          "spelling": {
+            "letter": "D",
+            "accidental": 0,
+            "octave": 5
+          },
+          "articulation": "staccato"
+        },
+        {
+          "kind": "note",
+          "midi": 74,
+          "ticks": 32,
+          "beats": 0.3333333333333333,
+          "tuplet": {
+            "actual": 3,
+            "normal": 2,
+            "writtenTicks": 48,
+            "group": "19-3-1-0",
+            "start": true
+          },
+          "spelling": {
+            "letter": "D",
+            "accidental": 0,
+            "octave": 5
+          },
+          "articulation": "tenuto"
+        },
+        {
+          "kind": "note",
+          "midi": 76,
+          "ticks": 32,
+          "beats": 0.3333333333333333,
+          "tuplet": {
+            "actual": 3,
+            "normal": 2,
+            "writtenTicks": 48,
+            "group": "19-3-1-0",
+            "start": false
+          },
+          "spelling": {
+            "letter": "E",
+            "accidental": 0,
+            "octave": 5
+          },
+          "articulation": "unmarked"
+        },
+        {
+          "kind": "note",
+          "midi": 74,
+          "ticks": 32,
+          "beats": 0.3333333333333333,
+          "tuplet": {
+            "actual": 3,
+            "normal": 2,
+            "writtenTicks": 48,
+            "group": "19-3-1-0",
+            "start": false
+          },
+          "spelling": {
+            "letter": "D",
+            "accidental": 0,
+            "octave": 5
+          },
+          "articulation": "unmarked"
+        },
+        {
+          "kind": "note",
+          "midi": 69,
+          "ticks": 48,
+          "beats": 0.5,
+          "spelling": {
+            "letter": "A",
+            "accidental": 0,
+            "octave": 4
+          },
+          "breath": true,
+          "articulation": "portato",
+          "hairpinEnd": true,
+          "dynamic": "mp"
+        }
+      ],
+      [
+        {
+          "kind": "note",
+          "midi": 69,
+          "ticks": 32,
+          "beats": 0.3333333333333333,
+          "tuplet": {
+            "actual": 3,
+            "normal": 2,
+            "writtenTicks": 48,
+            "group": "20-4-0-0",
+            "start": true
+          },
+          "spelling": {
+            "letter": "A",
+            "accidental": 0,
+            "octave": 4
+          },
+          "articulation": "legato",
+          "slurStart": true,
+          "dynamic": "mf",
+          "hairpinStart": "crescendo",
+          "expressionText": "cresc.",
+          "emphasis": "fp"
+        },
+        {
+          "kind": "note",
+          "midi": 71,
+          "ticks": 32,
+          "beats": 0.3333333333333333,
+          "tuplet": {
+            "actual": 3,
+            "normal": 2,
+            "writtenTicks": 48,
+            "group": "20-4-0-0",
+            "start": false
+          },
+          "spelling": {
+            "letter": "B",
+            "accidental": 0,
+            "octave": 4
+          },
+          "articulation": "legato"
+        },
+        {
+          "kind": "note",
+          "midi": 69,
+          "ticks": 32,
+          "beats": 0.3333333333333333,
+          "tuplet": {
+            "actual": 3,
+            "normal": 2,
+            "writtenTicks": 48,
+            "group": "20-4-0-0",
+            "start": false
+          },
+          "spelling": {
+            "letter": "A",
+            "accidental": 0,
+            "octave": 4
+          },
+          "articulation": "legato"
+        },
+        {
+          "kind": "note",
+          "midi": 68,
+          "ticks": 48,
+          "beats": 0.5,
+          "spelling": {
+            "letter": "G",
+            "accidental": 1,
+            "octave": 4
+          },
+          "articulation": "legato",
+          "slurEnd": true
+        },
+        {
+          "kind": "rest",
+          "midi": -1,
+          "ticks": 84,
+          "beats": 0.875
+        },
+        {
+          "kind": "note",
+          "midi": 66,
+          "ticks": 12,
+          "beats": 0.125,
+          "spelling": {
+            "letter": "F",
+            "accidental": 1,
+            "octave": 4
+          },
+          "articulation": "unmarked"
+        },
+        {
+          "kind": "note",
+          "midi": 68,
+          "ticks": 48,
+          "beats": 0.5,
+          "spelling": {
+            "letter": "G",
+            "accidental": 1,
+            "octave": 4
+          },
+          "articulation": "portato"
+        }
+      ],
+      [
+        {
+          "kind": "note",
+          "midi": 76,
+          "ticks": 48,
+          "beats": 0.5,
+          "spelling": {
+            "letter": "E",
+            "accidental": 0,
+            "octave": 5
+          },
+          "articulation": "marcato",
+          "hairpinEnd": true,
+          "dynamic": "f"
+        },
+        {
+          "kind": "note",
+          "midi": 76,
+          "ticks": 24,
+          "beats": 0.25,
+          "spelling": {
+            "letter": "E",
+            "accidental": 0,
+            "octave": 5
+          },
+          "articulation": "tenuto",
+          "hairpinStart": "diminuendo",
+          "expressionText": "dim."
+        },
+        {
+          "kind": "note",
+          "midi": 68,
+          "ticks": 48,
+          "beats": 0.5,
+          "spelling": {
+            "letter": "G",
+            "accidental": 1,
+            "octave": 4
+          },
+          "articulation": "unmarked"
+        },
+        {
+          "kind": "note",
+          "midi": 66,
+          "ticks": 24,
+          "beats": 0.25,
+          "spelling": {
+            "letter": "F",
+            "accidental": 1,
+            "octave": 4
+          },
+          "articulation": "unmarked"
+        },
+        {
+          "kind": "note",
+          "midi": 68,
+          "ticks": 84,
+          "beats": 0.875,
+          "spelling": {
+            "letter": "G",
+            "accidental": 1,
+            "octave": 4
+          },
+          "articulation": "portato"
+        },
+        {
+          "kind": "note",
+          "midi": 68,
+          "ticks": 12,
+          "beats": 0.125,
+          "spelling": {
+            "letter": "G",
+            "accidental": 1,
+            "octave": 4
+          },
+          "articulation": "staccatissimo"
+        },
+        {
+          "kind": "note",
+          "midi": 66,
+          "ticks": 48,
+          "beats": 0.5,
+          "spelling": {
+            "letter": "F",
+            "accidental": 1,
+            "octave": 4
+          },
+          "articulation": "legato"
+        }
+      ],
+      [
+        {
+          "kind": "note",
+          "midi": 68,
+          "ticks": 32,
+          "beats": 0.3333333333333333,
+          "tuplet": {
+            "actual": 3,
+            "normal": 2,
+            "writtenTicks": 48,
+            "group": "22-4-0-0",
+            "start": true
+          },
+          "spelling": {
+            "letter": "G",
+            "accidental": 1,
+            "octave": 4
+          },
+          "articulation": "accent"
+        },
+        {
+          "kind": "note",
+          "midi": 76,
+          "ticks": 32,
+          "beats": 0.3333333333333333,
+          "tuplet": {
+            "actual": 3,
+            "normal": 2,
+            "writtenTicks": 48,
+            "group": "22-4-0-0",
+            "start": false
+          },
+          "spelling": {
+            "letter": "E",
+            "accidental": 0,
+            "octave": 5
+          },
+          "articulation": "unmarked"
+        },
+        {
+          "kind": "note",
+          "midi": 76,
+          "ticks": 32,
+          "beats": 0.3333333333333333,
+          "tuplet": {
+            "actual": 3,
+            "normal": 2,
+            "writtenTicks": 48,
+            "group": "22-4-0-0",
+            "start": false
+          },
+          "spelling": {
+            "letter": "E",
+            "accidental": 0,
+            "octave": 5
+          },
+          "articulation": "portato"
+        },
+        {
+          "kind": "note",
+          "midi": 68,
+          "ticks": 48,
+          "beats": 0.5,
+          "spelling": {
+            "letter": "G",
+            "accidental": 1,
+            "octave": 4
+          },
+          "articulation": "staccatissimo"
+        },
+        {
+          "kind": "note",
+          "midi": 66,
+          "ticks": 84,
+          "beats": 0.875,
+          "spelling": {
+            "letter": "F",
+            "accidental": 1,
+            "octave": 4
+          },
+          "articulation": "legato",
+          "slurStart": true
+        },
+        {
+          "kind": "note",
+          "midi": 68,
+          "ticks": 12,
+          "beats": 0.125,
+          "spelling": {
+            "letter": "G",
+            "accidental": 1,
+            "octave": 4
+          },
+          "articulation": "legato",
+          "slurEnd": true
+        },
+        {
+          "kind": "rest",
+          "midi": -1,
+          "ticks": 48,
+          "beats": 0.5
+        }
+      ],
+      [
+        {
+          "kind": "note",
+          "midi": 66,
+          "ticks": 84,
+          "beats": 0.875,
+          "spelling": {
+            "letter": "F",
+            "accidental": 1,
+            "octave": 4
+          },
+          "articulation": "marcato"
+        },
+        {
+          "kind": "note",
+          "midi": 68,
+          "ticks": 12,
+          "beats": 0.125,
+          "spelling": {
+            "letter": "G",
+            "accidental": 1,
+            "octave": 4
+          },
+          "articulation": "staccatissimo"
+        },
+        {
+          "kind": "note",
+          "midi": 76,
+          "ticks": 48,
+          "beats": 0.5,
+          "spelling": {
+            "letter": "E",
+            "accidental": 0,
+            "octave": 5
+          },
+          "articulation": "legato",
+          "slurStart": true
+        },
+        {
+          "kind": "note",
+          "midi": 76,
+          "ticks": 12,
+          "beats": 0.125,
+          "spelling": {
+            "letter": "E",
+            "accidental": 0,
+            "octave": 5
+          },
+          "articulation": "legato",
+          "slurEnd": true
+        },
+        {
+          "kind": "note",
+          "midi": 68,
+          "ticks": 12,
+          "beats": 0.125,
+          "spelling": {
+            "letter": "G",
+            "accidental": 1,
+            "octave": 4
+          },
+          "articulation": "staccato"
+        },
+        {
+          "kind": "note",
+          "midi": 66,
+          "ticks": 12,
+          "beats": 0.125,
+          "spelling": {
+            "letter": "F",
+            "accidental": 1,
+            "octave": 4
+          },
+          "articulation": "tenuto"
+        },
+        {
+          "kind": "note",
+          "midi": 68,
+          "ticks": 12,
+          "beats": 0.125,
+          "spelling": {
+            "letter": "G",
+            "accidental": 1,
+            "octave": 4
+          },
+          "articulation": "unmarked"
+        },
+        {
+          "kind": "note",
+          "midi": 68,
+          "ticks": 12,
+          "beats": 0.125,
+          "spelling": {
+            "letter": "G",
+            "accidental": 1,
+            "octave": 4
+          },
+          "articulation": "unmarked"
+        },
+        {
+          "kind": "note",
+          "midi": 66,
+          "ticks": 12,
+          "beats": 0.125,
+          "spelling": {
+            "letter": "F",
+            "accidental": 1,
+            "octave": 4
+          },
+          "articulation": "portato"
+        },
+        {
+          "kind": "note",
+          "midi": 68,
+          "ticks": 12,
+          "beats": 0.125,
+          "spelling": {
+            "letter": "G",
+            "accidental": 1,
+            "octave": 4
+          },
+          "articulation": "staccatissimo"
+        },
+        {
+          "kind": "note",
+          "midi": 76,
+          "ticks": 12,
+          "beats": 0.125,
+          "spelling": {
+            "letter": "E",
+            "accidental": 0,
+            "octave": 5
+          },
+          "articulation": "legato",
+          "slurStart": true
+        },
+        {
+          "kind": "note",
+          "midi": 76,
+          "ticks": 12,
+          "beats": 0.125,
+          "spelling": {
+            "letter": "E",
+            "accidental": 0,
+            "octave": 5
+          },
+          "articulation": "legato",
+          "slurEnd": true
+        },
+        {
+          "kind": "note",
+          "midi": 68,
+          "ticks": 12,
+          "beats": 0.125,
+          "spelling": {
+            "letter": "G",
+            "accidental": 1,
+            "octave": 4
+          },
+          "articulation": "staccato"
+        },
+        {
+          "kind": "rest",
+          "midi": -1,
+          "ticks": 12,
+          "beats": 0.125
+        },
+        {
+          "kind": "note",
+          "midi": 69,
+          "ticks": 12,
+          "beats": 0.125,
+          "spelling": {
+            "letter": "A",
+            "accidental": 0,
+            "octave": 4
+          },
+          "breath": true,
+          "articulation": "unmarked",
+          "hairpinEnd": true,
+          "dynamic": "mf"
+        }
+      ],
+      [
+        {
+          "kind": "note",
+          "midi": 69,
+          "ticks": 144,
+          "beats": 1.5,
+          "spelling": {
+            "letter": "A",
+            "accidental": 0,
+            "octave": 4
+          },
+          "articulation": "legato",
+          "slurStart": true,
+          "dynamic": "p",
+          "hairpinStart": "crescendo"
+        },
+        {
+          "kind": "note",
+          "midi": 71,
+          "ticks": 48,
+          "beats": 0.5,
+          "spelling": {
+            "letter": "B",
+            "accidental": 0,
+            "octave": 4
+          },
+          "articulation": "legato"
+        },
+        {
+          "kind": "note",
+          "midi": 73,
+          "ticks": 48,
+          "beats": 0.5,
+          "spelling": {
+            "letter": "C",
+            "accidental": 1,
+            "octave": 5
+          },
+          "articulation": "legato",
+          "slurEnd": true
+        },
+        {
+          "kind": "rest",
+          "midi": -1,
+          "ticks": 48,
+          "beats": 0.5
+        }
+      ],
+      [
+        {
+          "kind": "note",
+          "midi": 68,
+          "ticks": 48,
+          "beats": 0.5,
+          "spelling": {
+            "letter": "G",
+            "accidental": 1,
+            "octave": 4
+          },
+          "articulation": "marcato"
+        },
+        {
+          "kind": "note",
+          "midi": 76,
+          "ticks": 48,
+          "beats": 0.5,
+          "spelling": {
+            "letter": "E",
+            "accidental": 0,
+            "octave": 5
+          },
+          "articulation": "tenuto",
+          "hairpinEnd": true,
+          "dynamic": "ff"
+        },
+        {
+          "kind": "note",
+          "midi": 74,
+          "ticks": 48,
+          "beats": 0.5,
+          "spelling": {
+            "letter": "D",
+            "accidental": 0,
+            "octave": 5
+          },
+          "articulation": "unmarked",
+          "hairpinStart": "diminuendo"
+        },
+        {
+          "kind": "note",
+          "midi": 76,
+          "ticks": 72,
+          "beats": 0.75,
+          "spelling": {
+            "letter": "E",
+            "accidental": 0,
+            "octave": 5
+          },
+          "articulation": "marcato"
+        },
+        {
+          "kind": "rest",
+          "midi": -1,
+          "ticks": 24,
+          "beats": 0.25
+        },
+        {
+          "kind": "rest",
+          "midi": -1,
+          "ticks": 48,
+          "beats": 0.5
+        }
+      ],
+      [
+        {
+          "kind": "note",
+          "midi": 76,
+          "ticks": 48,
+          "beats": 0.5,
+          "spelling": {
+            "letter": "E",
+            "accidental": 0,
+            "octave": 5
+          },
+          "articulation": "accent"
+        },
+        {
+          "kind": "note",
+          "midi": 68,
+          "ticks": 48,
+          "beats": 0.5,
+          "spelling": {
+            "letter": "G",
+            "accidental": 1,
+            "octave": 4
+          },
+          "articulation": "unmarked"
+        },
+        {
+          "kind": "note",
+          "midi": 68,
+          "ticks": 48,
+          "beats": 0.5,
+          "spelling": {
+            "letter": "G",
+            "accidental": 1,
+            "octave": 4
+          },
+          "articulation": "portato"
+        },
+        {
+          "kind": "note",
+          "midi": 76,
+          "ticks": 72,
+          "beats": 0.75,
+          "spelling": {
+            "letter": "E",
+            "accidental": 0,
+            "octave": 5
+          },
+          "articulation": "staccatissimo"
+        },
+        {
+          "kind": "note",
+          "midi": 74,
+          "ticks": 24,
+          "beats": 0.25,
+          "spelling": {
+            "letter": "D",
+            "accidental": 0,
+            "octave": 5
+          },
+          "articulation": "legato",
+          "slurStart": true
+        },
+        {
+          "kind": "note",
+          "midi": 76,
+          "ticks": 48,
+          "beats": 0.5,
+          "spelling": {
+            "letter": "E",
+            "accidental": 0,
+            "octave": 5
+          },
+          "articulation": "legato",
+          "slurEnd": true
+        }
+      ],
+      [
+        {
+          "kind": "note",
+          "midi": 76,
+          "ticks": 72,
+          "beats": 0.75,
+          "spelling": {
+            "letter": "E",
+            "accidental": 0,
+            "octave": 5
+          },
+          "articulation": "marcato"
+        },
+        {
+          "kind": "note",
+          "midi": 74,
+          "ticks": 24,
+          "beats": 0.25,
+          "spelling": {
+            "letter": "D",
+            "accidental": 0,
+            "octave": 5
+          },
+          "articulation": "staccatissimo"
+        },
+        {
+          "kind": "note",
+          "midi": 76,
+          "ticks": 48,
+          "beats": 0.5,
+          "spelling": {
+            "letter": "E",
+            "accidental": 0,
+            "octave": 5
+          },
+          "articulation": "legato",
+          "slurStart": true
+        },
+        {
+          "kind": "note",
+          "midi": 68,
+          "ticks": 24,
+          "beats": 0.25,
+          "spelling": {
+            "letter": "G",
+            "accidental": 1,
+            "octave": 4
+          },
+          "articulation": "legato",
+          "slurEnd": true
+        },
+        {
+          "kind": "rest",
+          "midi": -1,
+          "ticks": 24,
+          "beats": 0.25
+        },
+        {
+          "kind": "note",
+          "midi": 76,
+          "ticks": 48,
+          "beats": 0.5,
+          "spelling": {
+            "letter": "E",
+            "accidental": 0,
+            "octave": 5
+          },
+          "articulation": "tenuto"
+        },
+        {
+          "kind": "rest",
+          "midi": -1,
+          "ticks": 24,
+          "beats": 0.25
+        },
+        {
+          "kind": "note",
+          "midi": 69,
+          "ticks": 24,
+          "beats": 0.25,
+          "spelling": {
+            "letter": "A",
+            "accidental": 0,
+            "octave": 4
+          },
+          "breath": true,
+          "articulation": "unmarked",
+          "hairpinEnd": true,
+          "dynamic": "p"
+        }
+      ],
+      [
+        {
+          "kind": "note",
+          "midi": 69,
+          "ticks": 72,
+          "beats": 0.75,
+          "spelling": {
+            "letter": "A",
+            "accidental": 0,
+            "octave": 4
+          },
+          "articulation": "legato",
+          "slurStart": true,
+          "dynamic": "mp",
+          "hairpinStart": "crescendo",
+          "expressionText": "cresc.",
+          "emphasis": "subito p"
+        },
+        {
+          "kind": "note",
+          "midi": 71,
+          "ticks": 24,
+          "beats": 0.25,
+          "spelling": {
+            "letter": "B",
+            "accidental": 0,
+            "octave": 4
+          },
+          "articulation": "legato"
+        },
+        {
+          "kind": "note",
+          "midi": 73,
+          "ticks": 48,
+          "beats": 0.5,
+          "spelling": {
+            "letter": "C",
+            "accidental": 1,
+            "octave": 5
+          },
+          "articulation": "legato"
+        },
+        {
+          "kind": "note",
+          "midi": 68,
+          "ticks": 24,
+          "beats": 0.25,
+          "spelling": {
+            "letter": "G",
+            "accidental": 1,
+            "octave": 4
+          },
+          "articulation": "legato",
+          "slurEnd": true
+        },
+        {
+          "kind": "rest",
+          "midi": -1,
+          "ticks": 24,
+          "beats": 0.25
+        },
+        {
+          "kind": "note",
+          "midi": 76,
+          "ticks": 48,
+          "beats": 0.5,
+          "spelling": {
+            "letter": "E",
+            "accidental": 0,
+            "octave": 5
+          },
+          "articulation": "unmarked"
+        },
+        {
+          "kind": "note",
+          "midi": 74,
+          "ticks": 24,
+          "beats": 0.25,
+          "spelling": {
+            "letter": "D",
+            "accidental": 0,
+            "octave": 5
+          },
+          "articulation": "portato"
+        },
+        {
+          "kind": "note",
+          "midi": 76,
+          "ticks": 24,
+          "beats": 0.25,
+          "spelling": {
+            "letter": "E",
+            "accidental": 0,
+            "octave": 5
+          },
+          "articulation": "staccatissimo",
+          "hairpinEnd": true,
+          "dynamic": "f"
+        }
+      ],
+      [
+        {
+          "kind": "note",
+          "midi": 76,
+          "ticks": 24,
+          "beats": 0.25,
+          "spelling": {
+            "letter": "E",
+            "accidental": 0,
+            "octave": 5
+          },
+          "articulation": "marcato",
+          "hairpinStart": "diminuendo",
+          "expressionText": "dim."
+        },
+        {
+          "kind": "note",
+          "midi": 74,
+          "ticks": 24,
+          "beats": 0.25,
+          "spelling": {
+            "letter": "D",
+            "accidental": 0,
+            "octave": 5
+          },
+          "articulation": "tenuto"
+        },
+        {
+          "kind": "note",
+          "midi": 76,
+          "ticks": 48,
+          "beats": 0.5,
+          "spelling": {
+            "letter": "E",
+            "accidental": 0,
+            "octave": 5
+          },
+          "articulation": "unmarked"
+        },
+        {
+          "kind": "note",
+          "midi": 68,
+          "ticks": 24,
+          "beats": 0.25,
+          "spelling": {
+            "letter": "G",
+            "accidental": 1,
+            "octave": 4
+          },
+          "articulation": "unmarked"
+        },
+        {
+          "kind": "note",
+          "midi": 68,
+          "ticks": 24,
+          "beats": 0.25,
+          "spelling": {
+            "letter": "G",
+            "accidental": 1,
+            "octave": 4
+          },
+          "articulation": "portato"
+        },
+        {
+          "kind": "note",
+          "midi": 76,
+          "ticks": 48,
+          "beats": 0.5,
+          "spelling": {
+            "letter": "E",
+            "accidental": 0,
+            "octave": 5
+          },
+          "articulation": "staccatissimo"
+        },
+        {
+          "kind": "note",
+          "midi": 74,
+          "ticks": 24,
+          "beats": 0.25,
+          "spelling": {
+            "letter": "D",
+            "accidental": 0,
+            "octave": 5
+          },
+          "articulation": "legato",
+          "slurStart": true
+        },
+        {
+          "kind": "note",
+          "midi": 76,
+          "ticks": 48,
+          "beats": 0.5,
+          "spelling": {
+            "letter": "E",
+            "accidental": 0,
+            "octave": 5
+          },
+          "articulation": "legato",
+          "slurEnd": true
+        },
+        {
+          "kind": "note",
+          "midi": 76,
+          "ticks": 24,
+          "beats": 0.25,
+          "spelling": {
+            "letter": "E",
+            "accidental": 0,
+            "octave": 5
+          },
+          "tieToNext": true,
+          "articulation": "staccato"
+        }
+      ],
+      [
+        {
+          "kind": "note",
+          "midi": 76,
+          "ticks": 24,
+          "beats": 0.25,
+          "spelling": {
+            "letter": "E",
+            "accidental": 0,
+            "octave": 5
+          },
+          "articulation": "unmarked"
+        },
+        {
+          "kind": "note",
+          "midi": 76,
+          "ticks": 24,
+          "beats": 0.25,
+          "spelling": {
+            "letter": "E",
+            "accidental": 0,
+            "octave": 5
+          },
+          "articulation": "unmarked"
+        },
+        {
+          "kind": "rest",
+          "midi": -1,
+          "ticks": 48,
+          "beats": 0.5
+        },
+        {
+          "kind": "note",
+          "midi": 68,
+          "ticks": 24,
+          "beats": 0.25,
+          "spelling": {
+            "letter": "G",
+            "accidental": 1,
+            "octave": 4
+          },
+          "articulation": "staccatissimo"
+        },
+        {
+          "kind": "note",
+          "midi": 76,
+          "ticks": 24,
+          "beats": 0.25,
+          "spelling": {
+            "letter": "E",
+            "accidental": 0,
+            "octave": 5
+          },
+          "articulation": "legato",
+          "slurStart": true
+        },
+        {
+          "kind": "note",
+          "midi": 74,
+          "ticks": 32,
+          "beats": 0.3333333333333333,
+          "tuplet": {
+            "actual": 3,
+            "normal": 2,
+            "writtenTicks": 48,
+            "group": "30-2-1-0",
+            "start": true
+          },
+          "spelling": {
+            "letter": "D",
+            "accidental": 0,
+            "octave": 5
+          },
+          "articulation": "legato",
+          "slurEnd": true
+        },
+        {
+          "kind": "note",
+          "midi": 76,
+          "ticks": 32,
+          "beats": 0.3333333333333333,
+          "tuplet": {
+            "actual": 3,
+            "normal": 2,
+            "writtenTicks": 48,
+            "group": "30-2-1-0",
+            "start": false
+          },
+          "spelling": {
+            "letter": "E",
+            "accidental": 0,
+            "octave": 5
+          },
+          "articulation": "staccato"
+        },
+        {
+          "kind": "note",
+          "midi": 76,
+          "ticks": 32,
+          "beats": 0.3333333333333333,
+          "tuplet": {
+            "actual": 3,
+            "normal": 2,
+            "writtenTicks": 48,
+            "group": "30-2-1-0",
+            "start": false
+          },
+          "spelling": {
+            "letter": "E",
+            "accidental": 0,
+            "octave": 5
+          },
+          "articulation": "tenuto"
+        },
+        {
+          "kind": "note",
+          "midi": 74,
+          "ticks": 48,
+          "beats": 0.5,
+          "spelling": {
+            "letter": "D",
+            "accidental": 0,
+            "octave": 5
+          },
+          "articulation": "unmarked"
+        }
+      ],
+      [
+        {
+          "kind": "rest",
+          "midi": -1,
+          "ticks": 24,
+          "beats": 0.25
+        },
+        {
+          "kind": "rest",
+          "midi": -1,
+          "ticks": 24,
+          "beats": 0.25
+        },
+        {
+          "kind": "note",
+          "midi": 68,
+          "ticks": 48,
+          "beats": 0.5,
+          "spelling": {
+            "letter": "G",
+            "accidental": 1,
+            "octave": 4
+          },
+          "articulation": "legato",
+          "slurStart": true
+        },
+        {
+          "kind": "note",
+          "midi": 76,
+          "ticks": 24,
+          "beats": 0.25,
+          "spelling": {
+            "letter": "E",
+            "accidental": 0,
+            "octave": 5
+          },
+          "articulation": "legato",
+          "slurEnd": true
+        },
+        {
+          "kind": "note",
+          "midi": 74,
+          "ticks": 24,
+          "beats": 0.25,
+          "spelling": {
+            "letter": "D",
+            "accidental": 0,
+            "octave": 5
+          },
+          "articulation": "staccato"
+        },
+        {
+          "kind": "note",
+          "midi": 76,
+          "ticks": 48,
+          "beats": 0.5,
+          "spelling": {
+            "letter": "E",
+            "accidental": 0,
+            "octave": 5
+          },
+          "articulation": "tenuto"
+        },
+        {
+          "kind": "note",
+          "midi": 76,
+          "ticks": 24,
+          "beats": 0.25,
+          "spelling": {
+            "letter": "E",
+            "accidental": 0,
+            "octave": 5
+          },
+          "articulation": "unmarked"
+        },
+        {
+          "kind": "note",
+          "midi": 74,
+          "ticks": 48,
+          "beats": 0.5,
+          "spelling": {
+            "letter": "D",
+            "accidental": 0,
+            "octave": 5
+          },
+          "articulation": "unmarked"
+        },
+        {
+          "kind": "note",
+          "midi": 69,
+          "ticks": 24,
+          "beats": 0.25,
+          "spelling": {
+            "letter": "A",
+            "accidental": 0,
+            "octave": 4
+          },
+          "articulation": "portato",
+          "hairpinEnd": true,
+          "dynamic": "mp"
+        }
+      ]
+    ],
+    "meters": [
+      {
+        "name": "6/8",
+        "numerator": 6,
+        "denominator": 8,
+        "groups": [
+          3,
+          3
+        ],
+        "barTicks": 288,
+        "beatTicks": 144,
+        "groupTicks": [
+          144,
+          144
+        ]
+      },
+      {
+        "name": "6/8",
+        "numerator": 6,
+        "denominator": 8,
+        "groups": [
+          3,
+          3
+        ],
+        "barTicks": 288,
+        "beatTicks": 144,
+        "groupTicks": [
+          144,
+          144
+        ]
+      },
+      {
+        "name": "6/8",
+        "numerator": 6,
+        "denominator": 8,
+        "groups": [
+          3,
+          3
+        ],
+        "barTicks": 288,
+        "beatTicks": 144,
+        "groupTicks": [
+          144,
+          144
+        ]
+      },
+      {
+        "name": "6/8",
+        "numerator": 6,
+        "denominator": 8,
+        "groups": [
+          3,
+          3
+        ],
+        "barTicks": 288,
+        "beatTicks": 144,
+        "groupTicks": [
+          144,
+          144
+        ]
+      },
+      {
+        "name": "6/8",
+        "numerator": 6,
+        "denominator": 8,
+        "groups": [
+          3,
+          3
+        ],
+        "barTicks": 288,
+        "beatTicks": 144,
+        "groupTicks": [
+          144,
+          144
+        ]
+      },
+      {
+        "name": "6/8",
+        "numerator": 6,
+        "denominator": 8,
+        "groups": [
+          3,
+          3
+        ],
+        "barTicks": 288,
+        "beatTicks": 144,
+        "groupTicks": [
+          144,
+          144
+        ]
+      },
+      {
+        "name": "6/8",
+        "numerator": 6,
+        "denominator": 8,
+        "groups": [
+          3,
+          3
+        ],
+        "barTicks": 288,
+        "beatTicks": 144,
+        "groupTicks": [
+          144,
+          144
+        ]
+      },
+      {
+        "name": "6/8",
+        "numerator": 6,
+        "denominator": 8,
+        "groups": [
+          3,
+          3
+        ],
+        "barTicks": 288,
+        "beatTicks": 144,
+        "groupTicks": [
+          144,
+          144
+        ]
+      },
+      {
+        "name": "6/8",
+        "numerator": 6,
+        "denominator": 8,
+        "groups": [
+          3,
+          3
+        ],
+        "barTicks": 288,
+        "beatTicks": 144,
+        "groupTicks": [
+          144,
+          144
+        ]
+      },
+      {
+        "name": "6/8",
+        "numerator": 6,
+        "denominator": 8,
+        "groups": [
+          3,
+          3
+        ],
+        "barTicks": 288,
+        "beatTicks": 144,
+        "groupTicks": [
+          144,
+          144
+        ]
+      },
+      {
+        "name": "6/8",
+        "numerator": 6,
+        "denominator": 8,
+        "groups": [
+          3,
+          3
+        ],
+        "barTicks": 288,
+        "beatTicks": 144,
+        "groupTicks": [
+          144,
+          144
+        ]
+      },
+      {
+        "name": "6/8",
+        "numerator": 6,
+        "denominator": 8,
+        "groups": [
+          3,
+          3
+        ],
+        "barTicks": 288,
+        "beatTicks": 144,
+        "groupTicks": [
+          144,
+          144
+        ]
+      },
+      {
+        "name": "6/8",
+        "numerator": 6,
+        "denominator": 8,
+        "groups": [
+          3,
+          3
+        ],
+        "barTicks": 288,
+        "beatTicks": 144,
+        "groupTicks": [
+          144,
+          144
+        ]
+      },
+      {
+        "name": "6/8",
+        "numerator": 6,
+        "denominator": 8,
+        "groups": [
+          3,
+          3
+        ],
+        "barTicks": 288,
+        "beatTicks": 144,
+        "groupTicks": [
+          144,
+          144
+        ]
+      },
+      {
+        "name": "6/8",
+        "numerator": 6,
+        "denominator": 8,
+        "groups": [
+          3,
+          3
+        ],
+        "barTicks": 288,
+        "beatTicks": 144,
+        "groupTicks": [
+          144,
+          144
+        ]
+      },
+      {
+        "name": "6/8",
+        "numerator": 6,
+        "denominator": 8,
+        "groups": [
+          3,
+          3
+        ],
+        "barTicks": 288,
+        "beatTicks": 144,
+        "groupTicks": [
+          144,
+          144
+        ]
+      },
+      {
+        "name": "6/8",
+        "numerator": 6,
+        "denominator": 8,
+        "groups": [
+          3,
+          3
+        ],
+        "barTicks": 288,
+        "beatTicks": 144,
+        "groupTicks": [
+          144,
+          144
+        ]
+      },
+      {
+        "name": "6/8",
+        "numerator": 6,
+        "denominator": 8,
+        "groups": [
+          3,
+          3
+        ],
+        "barTicks": 288,
+        "beatTicks": 144,
+        "groupTicks": [
+          144,
+          144
+        ]
+      },
+      {
+        "name": "6/8",
+        "numerator": 6,
+        "denominator": 8,
+        "groups": [
+          3,
+          3
+        ],
+        "barTicks": 288,
+        "beatTicks": 144,
+        "groupTicks": [
+          144,
+          144
+        ]
+      },
+      {
+        "name": "6/8",
+        "numerator": 6,
+        "denominator": 8,
+        "groups": [
+          3,
+          3
+        ],
+        "barTicks": 288,
+        "beatTicks": 144,
+        "groupTicks": [
+          144,
+          144
+        ]
+      },
+      {
+        "name": "6/8",
+        "numerator": 6,
+        "denominator": 8,
+        "groups": [
+          3,
+          3
+        ],
+        "barTicks": 288,
+        "beatTicks": 144,
+        "groupTicks": [
+          144,
+          144
+        ]
+      },
+      {
+        "name": "6/8",
+        "numerator": 6,
+        "denominator": 8,
+        "groups": [
+          3,
+          3
+        ],
+        "barTicks": 288,
+        "beatTicks": 144,
+        "groupTicks": [
+          144,
+          144
+        ]
+      },
+      {
+        "name": "6/8",
+        "numerator": 6,
+        "denominator": 8,
+        "groups": [
+          3,
+          3
+        ],
+        "barTicks": 288,
+        "beatTicks": 144,
+        "groupTicks": [
+          144,
+          144
+        ]
+      },
+      {
+        "name": "6/8",
+        "numerator": 6,
+        "denominator": 8,
+        "groups": [
+          3,
+          3
+        ],
+        "barTicks": 288,
+        "beatTicks": 144,
+        "groupTicks": [
+          144,
+          144
+        ]
+      },
+      {
+        "name": "6/8",
+        "numerator": 6,
+        "denominator": 8,
+        "groups": [
+          3,
+          3
+        ],
+        "barTicks": 288,
+        "beatTicks": 144,
+        "groupTicks": [
+          144,
+          144
+        ]
+      },
+      {
+        "name": "6/8",
+        "numerator": 6,
+        "denominator": 8,
+        "groups": [
+          3,
+          3
+        ],
+        "barTicks": 288,
+        "beatTicks": 144,
+        "groupTicks": [
+          144,
+          144
+        ]
+      },
+      {
+        "name": "6/8",
+        "numerator": 6,
+        "denominator": 8,
+        "groups": [
+          3,
+          3
+        ],
+        "barTicks": 288,
+        "beatTicks": 144,
+        "groupTicks": [
+          144,
+          144
+        ]
+      },
+      {
+        "name": "6/8",
+        "numerator": 6,
+        "denominator": 8,
+        "groups": [
+          3,
+          3
+        ],
+        "barTicks": 288,
+        "beatTicks": 144,
+        "groupTicks": [
+          144,
+          144
+        ]
+      },
+      {
+        "name": "6/8",
+        "numerator": 6,
+        "denominator": 8,
+        "groups": [
+          3,
+          3
+        ],
+        "barTicks": 288,
+        "beatTicks": 144,
+        "groupTicks": [
+          144,
+          144
+        ]
+      },
+      {
+        "name": "6/8",
+        "numerator": 6,
+        "denominator": 8,
+        "groups": [
+          3,
+          3
+        ],
+        "barTicks": 288,
+        "beatTicks": 144,
+        "groupTicks": [
+          144,
+          144
+        ]
+      },
+      {
+        "name": "6/8",
+        "numerator": 6,
+        "denominator": 8,
+        "groups": [
+          3,
+          3
+        ],
+        "barTicks": 288,
+        "beatTicks": 144,
+        "groupTicks": [
+          144,
+          144
+        ]
+      },
+      {
+        "name": "6/8",
+        "numerator": 6,
+        "denominator": 8,
+        "groups": [
+          3,
+          3
+        ],
+        "barTicks": 288,
+        "beatTicks": 144,
+        "groupTicks": [
+          144,
+          144
+        ]
+      }
+    ],
+    "keys": [
+      "A",
+      "A",
+      "A",
+      "A",
+      "A",
+      "A",
+      "A",
+      "A",
+      "A",
+      "A",
+      "A",
+      "A",
+      "A",
+      "A",
+      "A",
+      "A",
+      "A",
+      "A",
+      "A",
+      "A",
+      "A",
+      "A",
+      "A",
+      "A",
+      "A",
+      "A",
+      "A",
+      "A",
+      "A",
+      "A",
+      "A",
+      "A"
+    ],
+    "phrases": [
+      {
+        "startBar": 0,
+        "endBar": 3,
+        "role": "call"
+      },
+      {
+        "startBar": 4,
+        "endBar": 7,
+        "role": "response"
+      },
+      {
+        "startBar": 8,
+        "endBar": 11,
+        "role": "contrast"
+      },
+      {
+        "startBar": 12,
+        "endBar": 15,
+        "role": "resolution"
+      },
+      {
+        "startBar": 16,
+        "endBar": 19,
+        "role": "call"
+      },
+      {
+        "startBar": 20,
+        "endBar": 23,
+        "role": "response"
+      },
+      {
+        "startBar": 24,
+        "endBar": 27,
+        "role": "contrast"
+      },
+      {
+        "startBar": 28,
+        "endBar": 31,
+        "role": "resolution"
+      }
+    ],
+    "version": 3,
+    "tempoEvents": [
+      {
+        "tick": 0,
+        "bpm": 72,
+        "label": "Andante"
+      }
+    ]
+  }
+}

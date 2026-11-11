@@ -1,0 +1,23 @@
+X:1
+T:Clarinet étude
+M:6/8
+L:1/8
+Q:"Andante"3/8=72
+%%stretchlast 1
+K:A clef=treble
+!p!!crescendo(!(d3 e3/2d1/2d1) | !crescendo)!!ff!!marcato!e3/2!diminuendo(!!tenuto!d1/2 z1 !marcato!F3/2.!tenuto!d1/2!wedge!e1- |
+e1d1.!tenuto!e1 !wedge!d1(F1F1) | !marcato!d3/2!wedge!e1/2(d1 d3/2).e1/2!diminuendo)!!p!!tenuto!A1!breath! |
+!mp!!sfz!"_cresc."!crescendo(!(d3/2d1/2F1) z1/2 F1/2F1.!tenuto!G1/2!wedge!F1/2 | !crescendo)!!f!(3:2:3!marcato!d1"_dim."!diminuendo(!!tenuto!d1F1G1 .!tenuto!F1!wedge!F1/2 z1 F1/2 |
+z3/2 d1/2 z1 (3:2:3!wedge!G1(F1F1).G1 | !marcato!F1/2!wedge!d1/2(d1F1/2).G1/2 z1 F1/2G1!diminuendo)!!mp!.!tenuto!A1/2!breath! |
+!mf!!crescendo(!(3:2:3(B1B1c1d1) !accent!e1e1/2.!tenuto!d1!crescendo)!!ff!!wedge!e1/2 | !diminuendo(!!marcato!G1!tenuto!G1/2e1d1/2 .!tenuto!e1/4 z1/4 (d1/4e1/4) z1/4 !tenuto!G1/4e1/4d1/4.!tenuto!e1/4!wedge!e1/4(d1/4e1/4) |
+(3:2:3!accent!G1G1.!tenuto!e1!wedge!d1 (e1e1/2).d1!tenuto!e1/2 | !marcato!G7/4!wedge!G1/4(e1 d7/4).e1/4!diminuendo)!!mf!!tenuto!A1!breath! |
+!p!"_sf""_cresc."!crescendo(!(B3 c3/2G1/2) z1 | !crescendo)!!f!!marcato!e3/2"_dim."!diminuendo(!!tenuto!d1/2e1 !marcato!e3/2 z1/2 !wedge!e1- |
+e3 z1 .!tenuto!e1!wedge!d1 | !marcato!e1!wedge!e1(d1 e3/2) z1/2 !diminuendo)!!p!!tenuto!A1!breath! |
+z3/2 !mp!!crescendo(!(e1/2d1 (3:2:3d1)e1d1.!tenuto!F1 | (3:2:3!marcato!F1!tenuto!d1!crescendo)!!ff!e1!diminuendo(!d1 .!tenuto!d1!wedge!e1/2 z1 F1/2- |
+F3/2d1/2.!tenuto!e1 (3:2:3!wedge!d1(d1e1) z1 | !marcato!F1/2 z1/2 (d1e1/2).d1/2 (3:2:3!tenuto!d1e1d1!diminuendo)!!mp!.!tenuto!A1!breath! |
+!mf!"_fp""_cresc."!crescendo(!(3:2:3(A1B1A1G1) z7/4 F1/4.!tenuto!G1 | !crescendo)!!f!!marcato!e1"_dim."!diminuendo(!!tenuto!e1/2G1F1/2 .!tenuto!G7/4!wedge!G1/4F1 |
+(3:2:3!accent!G1e1.!tenuto!e1!wedge!G1 (F7/4G1/4) z1 | !marcato!F7/4!wedge!G1/4(e1 e1/4).G1/4!tenuto!F1/4G1/4G1/4.!tenuto!F1/4!wedge!G1/4(e1/4e1/4).G1/4 z1/4 !diminuendo)!!mf!A1/4!breath! |
+!p!!crescendo(!(A3 B1c1) z1 | !marcato!G1!crescendo)!!ff!!tenuto!e1!diminuendo(!d1 !marcato!e3/2 z1/2 z1 |
+!accent!e1G1.!tenuto!G1 !wedge!e3/2(d1/2e1) | !marcato!e3/2!wedge!d1/2(e1 G1/2) z1/2 !tenuto!e1 z1/2 !diminuendo)!!p!A1/2!breath! |
+!mp!"_subito p""_cresc."!crescendo(!(A3/2B1/2c1 G1/2) z1/2 e1.!tenuto!d1/2!crescendo)!!f!!wedge!e1/2 | "_dim."!diminuendo(!!marcato!e1/2!tenuto!d1/2e1G1/2.!tenuto!G1/2 !wedge!e1(d1/2e1).e1/2- |
+e1/2e1/2 z1 !wedge!G1/2(e1/2 (3:2:3d1).e1!tenuto!e1d1 | z1/2 z1/2 (G1e1/2).d1/2 !tenuto!e1e1/2d1!diminuendo)!!mp!.!tenuto!A1/2 |]
