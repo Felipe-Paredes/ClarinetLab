@@ -1,6 +1,33 @@
 # ClarinetLab
 A local React + TypeScript + Vite clarinet practice studio. PRODUCT_SPEC.md preserves the master vision; VERSION_3_SPEC.md defines the current music-engine extension.
 
+## Screenshots
+
+Actual Version 3 application captures from a 1440 × 900 desktop viewport. Full-page screenshots preserve the complete score and controls; exercises are generated locally, not mockups.
+
+### Practice Studio
+
+An intermediate G-major passage in 4/4, generated with seed **1729**.
+
+![ClarinetLab Practice Studio with a generated G-major passage and playback controls](docs/screenshots/practice-studio.jpg)
+
+### Expressive Version 3 étude
+
+An eight-measure A-major study in 6/8 at dotted-quarter = 72, using the Version 3 demonstration settings with length adjusted to eight measures and seed **1729**. The score includes slurs, articulations, rests, tuplets and dynamic contours.
+
+![Procedurally generated Version 3 clarinet étude with expressive notation](docs/screenshots/version-3-expressive-etude.jpg)
+
+### Advanced Settings
+
+<details>
+<summary>View the complete expanded settings panel</summary>
+
+Customize tonality, register, intervals, rhythm, articulation, dynamics, phrasing and tempo expression.
+
+![Expanded Advanced Settings panel showing all exercise customization controls](docs/screenshots/advanced-settings.jpg)
+
+</details>
+
 ## Run and verify
 With Node.js and pnpm installed:
 
