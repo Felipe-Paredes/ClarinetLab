@@ -2,6 +2,7 @@ import { useEffect, useRef, useState } from 'react';
 import abcjs from 'abcjs';
 import type { Passage } from './types';
 import { passageToAbc } from './notationAbc';
+import { barMeter } from './meter';
 
 export function Notation({ passage }: { passage: Passage }) {
   const target = useRef<HTMLDivElement>(null);
@@ -23,6 +24,5 @@ export function Notation({ passage }: { passage: Passage }) {
       add_classes: true, scale: 1.1,
     });
   }, [passage, narrow]);
-  return <div ref={container} className="notation-scroll" tabIndex={0} role="region" aria-label={'Written B-flat clarinet music, ' + passage.options.measures + ' measures in ' + passage.options.key + ' major, ' + passage.options.meter + '/4 time'}><div className="notation" ref={target} /></div>;
+  return <div ref={container} className="notation-scroll" tabIndex={0} role="region" aria-label={'Written B-flat clarinet music, ' + passage.options.measures + ' measures in ' + passage.options.key + ' ' + (passage.options.tonality??'major') + ', ' + barMeter(passage,0).name + ' time'}><div className="notation" ref={target} /></div>;
 }
-

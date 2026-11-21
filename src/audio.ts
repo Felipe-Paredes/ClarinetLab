@@ -1,13 +1,17 @@
 import Soundfont from 'soundfont-player';
+import { createTimeline, createMetronomeSchedule } from './timing';
+import { scalePitches } from './theory';
+import { pitchRange } from './technique';
 import { eventTicks, isRest, TICKS_PER_BEAT, type Dynamic, type Passage } from './types';
 
 export const BB_CLARINET = { name: 'B-flat clarinet', transposition: -2 } as const;
 export function writtenToSounding(midi: number, instrument: { transposition: number } = BB_CLARINET): number { return midi + instrument.transposition; }
-export const DYNAMIC_GAIN: Record<Dynamic, number> = { pp: 0.25, p: 0.36, mp: 0.48, mf: 0.62, f: 0.78, ff: 0.92 };
+export const DYNAMIC_GAIN: Record<Dynamic, number> = { ppp: 0.15, pp: 0.25, p: 0.36, mp: 0.48, mf: 0.62, f: 0.78, ff: 0.92, fff: 1 };
 export interface GainPoint { time: number; gain: number; linear: boolean; }
 export interface ScheduledNote { midi: number; time: number; duration: number; soundingDuration?: number; gain?: number; gainAutomation?: GainPoint[]; }
 export function createSchedule(passage: Passage, tempo: number): { notes: ScheduledNote[]; duration: number } {
   if (!Number.isFinite(tempo) || tempo < 20 || tempo > 300) throw new Error('Tempo must be between 20 and 300 BPM.');
+  const timeline = createTimeline(passage, tempo);
   const events = passage.bars.flat();
   const starts: number[] = [];
   let totalTicks = 0;
@@ -22,7 +26,7 @@ export function createSchedule(passage: Passage, tempo: number): { notes: Schedu
   const gains: (number | undefined)[] = [];
   const contours: { start: number; end: number; from: number; to: number }[] = [];
   let dynamic: number | undefined;
-  for (const event of events) { if (event.dynamic) dynamic = DYNAMIC_GAIN[event.dynamic]; gains.push(dynamic); }
+  for (const event of events) { if (event.dynamic) dynamic = DYNAMIC_GAIN[event.dynamic]; if (event.emphasis === 'subito p') dynamic = DYNAMIC_GAIN.p; if (event.emphasis === 'subito f') dynamic = DYNAMIC_GAIN.f; if (event.emphasis === 'fp') dynamic = DYNAMIC_GAIN.p; gains.push(dynamic); }
   for (let i = 0; i < events.length; i++) {
     const direction = events[i].hairpinStart;
     if (!direction) continue;
@@ -35,7 +39,7 @@ export function createSchedule(passage: Passage, tempo: number): { notes: Schedu
     contours.push({ start: starts[i], end: starts[end], from, to });
     for (let j = i; j <= end; j++) gains[j] = from + (to - from) * (starts[j] - starts[i]) / span;
   }
-  const secondsPerTick = 60 / tempo / TICKS_PER_BEAT;
+
   const notes: ScheduledNote[] = [];
   let slurred = false;
   for (let i = 0; i < events.length; i++) {
@@ -47,11 +51,11 @@ export function createSchedule(passage: Passage, tempo: number): { notes: Schedu
     let ticks = eventTicks(event);
     let end = i;
     while (events[end].tieToNext) { end++; ticks += eventTicks(events[end]); }
-    const duration = ticks * secondsPerTick;
-    const note: ScheduledNote = { midi: writtenToSounding(event.midi), time: starts[i] * secondsPerTick, duration };
+    const duration = timeline.secondsAt(starts[i] + ticks) - timeline.secondsAt(starts[i]);
+    const note: ScheduledNote = { midi: writtenToSounding(event.midi), time: timeline.secondsAt(starts[i]), duration };
     const articulation = event.articulation;
     if (articulation || inSlur) {
-      const factor = articulation === 'staccato' ? 0.5 : articulation === 'marcato' ? 0.75 : articulation === 'tenuto' || articulation === 'legato' || inSlur ? 1 : 0.94;
+      const factor = articulation === 'staccatissimo' ? 0.28 : articulation === 'portato' ? 0.82 : articulation === 'staccato' ? 0.5 : articulation === 'marcato' ? 0.75 : articulation === 'tenuto' || articulation === 'legato' || inSlur ? 1 : 0.94;
       note.soundingDuration = duration * factor;
     }
     if (gains[i] !== undefined || articulation === 'accent' || articulation === 'marcato') {
@@ -72,16 +76,39 @@ export function createSchedule(passage: Passage, tempo: number): { notes: Schedu
       for (let j = i + 1; j <= end; j++) if (events[j].dynamic) points.add(starts[j]);
       const accent = articulation === 'accent' ? 1.2 : articulation === 'marcato' ? 1.35 : 1;
       note.gainAutomation = [...points].sort((a, b) => a - b).map((tick, index, all) => ({
-        time: (tick - starts[i]) * secondsPerTick,
+        time: timeline.secondsAt(tick) - note.time,
         gain: Math.min(1, at(tick === endTick ? tick - 1e-6 : tick) * accent),
         linear: index > 0 && overlapping.some(c => c.start <= all[index - 1] && c.end >= tick),
       }));
     }
-    notes.push(note);
+    if (event.emphasis === 'sfz' || event.emphasis === 'sf' || event.emphasis === 'fp') {
+      const baseline = event.emphasis === 'fp' ? DYNAMIC_GAIN.p : note.gain ?? DYNAMIC_GAIN.mf;
+      const peak = event.emphasis === 'sfz' ? 1 : DYNAMIC_GAIN.f;
+      const settle = Math.min(0.16, duration * 0.25);
+      const remaining = (note.gainAutomation ?? []).filter(point => point.time > settle);
+      note.gain = peak;
+      note.gainAutomation = [{ time: 0, gain: peak, linear: false }, { time: settle, gain: baseline, linear: true }, ...remaining];
+    }
+    if (event.ornament) {
+      const key = passage.keys?.[passage.bars.findIndex(bar => bar.includes(event))] ?? passage.options.key;
+      const [low, high] = pitchRange(passage.options);
+      const near = scalePitches(key, passage.options.tonality ?? 'major', Math.max(low,event.midi-4),Math.min(high,event.midi+4));
+      const upper = writtenToSounding(event.ornamentMidi ?? near.find(p=>p.midi>event.midi)?.midi ?? event.midi);
+      const lower = writtenToSounding(near.filter(p=>p.midi<event.midi).at(-1)?.midi ?? event.midi);
+      let pattern: { midi:number; fraction:number }[];
+      if (event.ornament === 'trill') {
+        const count = Math.max(4,Math.min(32,Math.floor(duration/0.09)));
+        pattern=Array.from({length:count},(_,j)=>({midi:j%2===0?upper:note.midi,fraction:1/count}));
+      } else if (event.ornament === 'mordent') pattern=[{midi:note.midi,fraction:0.125},{midi:lower,fraction:0.125},{midi:note.midi,fraction:0.75}];
+      else if (event.ornament === 'turn') pattern=[{midi:upper,fraction:0.125},{midi:note.midi,fraction:0.125},{midi:lower,fraction:0.125},{midi:note.midi,fraction:0.625}];
+      else { const fraction=event.ornament==='appoggiatura'?0.5:Math.min(0.2,0.1/duration); pattern=[{midi:upper,fraction},{midi:note.midi,fraction:1-fraction}]; }
+      let offset=0;
+      for(const part of pattern){const segmentDuration=duration*part.fraction;const gain=expressionAt(note,offset);const finish=expressionAt(note,offset+segmentDuration);notes.push({midi:part.midi,time:note.time+offset,duration:segmentDuration,soundingDuration:segmentDuration*(event.ornament==='trill'?0.98:1),gain,gainAutomation:[{time:0,gain,linear:false},{time:segmentDuration,gain:finish,linear:true}]});offset+=segmentDuration;}
+    } else notes.push(note);
     for (let j = i + 1; j <= end; j++) { if (events[j].slurStart) slurred = true; if (events[j].slurEnd) slurred = false; }
     i = end;
   }
-  return { notes, duration: totalTicks * secondsPerTick };
+  return { notes, duration: timeline.duration };
 }
 
 /** Approximate sustain region: matching positive-going zero crossings away from
@@ -147,7 +174,7 @@ export class ClarinetPlayer {
     const start = context.currentTime + 0.08;
     let nextNote = 0;
     let nextBeat = 0;
-    const beatDuration = 60 / tempo;
+    const metronomeBeats = metronome ? createMetronomeSchedule(passage, tempo) : [];
     const track = (source: AudioScheduledSourceNode, gain: GainNode) => {
       this.sources.set(source, gain);
       source.onended = () => { source.disconnect(); gain.disconnect(); this.sources.delete(source); };
@@ -186,13 +213,13 @@ export class ClarinetPlayer {
         track(source, gain);
         source.start(onset, Math.max(0, onset - when)); source.stop(end);
       }
-      if (metronome) while (nextBeat * beatDuration < schedule.duration - 0.001 && start + nextBeat * beatDuration <= horizon) {
-        const beat = nextBeat++;
-        const when = start + beat * beatDuration;
+      if (metronome) while (nextBeat < metronomeBeats.length && start + metronomeBeats[nextBeat].time <= horizon) {
+        const beat = metronomeBeats[nextBeat++];
+        const when = start + beat.time;
         if (when < context.currentTime) continue;
         const source = context.createOscillator();
         const gain = context.createGain();
-        source.frequency.value = beat % passage.options.meter === 0 ? 1200 : 850;
+        source.frequency.value = beat.accent === 'bar' ? 1200 : beat.accent === 'group' ? 1000 : 850;
         gain.gain.setValueAtTime(0.075, when);
         gain.gain.exponentialRampToValueAtTime(0.001, when + 0.035);
         source.connect(gain).connect(context.destination);

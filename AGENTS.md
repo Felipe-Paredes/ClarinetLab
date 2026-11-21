@@ -22,4 +22,4 @@ Run pnpm test and pnpm build before committing meaningful code milestones. Cover
 - Verify pushes succeed before claiming GitHub backup. If remote history exists, inspect and integrate safely; never overwrite it.
 
 ## Current scope extension
-The user explicitly requested CORE_ENGINE_SPEC.md after the Phase 1 audit. Read it for the current expressive-engine requirements. Preserve the original master specification. Follow ENGINE_ARCHITECTURE.md for integer tick timing and separate ties/slurs. Tuplets are a subsequent capability; unrelated product phases remain out of scope.
+The user explicitly requested CORE_ENGINE_SPEC.md after the Phase 1 audit. Read it for the current expressive-engine requirements. Preserve the original master specification. Follow ENGINE_ARCHITECTURE.md for integer tick timing and separate ties/slurs. VERSION_3_SPEC.md now authorizes the comprehensive music-engine extension. Read VERSION_3_ARCHITECTURE.md and preserve the earlier specifications. Tuplets use integer ticks and explicit written/performed duration metadata. Unrelated product phases remain out of scope.
